@@ -3,98 +3,196 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Most AI Hub - Best AI Tools for Students</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>Most AI Hub - 30+ Best AI Tools</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        :root { --primary-color: #007bff; --secondary-color: #f0f7ff; --text-color: #333; --light-text: #666; --white: #ffffff; --border-color: #eef2f6; }
-        * { margin: 0; padding: 0; box-sizing: border-box; outline: none; }
-        body { font-family: 'Inter', sans-serif; background-color: #fcfdfe; color: var(--text-color); line-height: 1.6; }
-        nav { display: flex; justify-content: space-between; align-items: center; padding: 15px 5%; background: var(--white); position: sticky; top: 0; box-shadow: 0 2px 10px rgba(0,0,0,0.03); z-index: 1000; }
-        .logo { font-size: 22px; font-weight: 700; color: var(--primary-color); text-decoration: none; }
-        .hero { text-align: center; padding: 60px 5% 40px; background: linear-gradient(180deg, var(--secondary-color) 0%, #fcfdfe 100%); }
-        .hero h1 { font-size: 32px; margin-bottom: 15px; color: #111; font-weight: 800; }
-        .hero p { font-size: 16px; color: var(--light-text); max-width: 600px; margin: 0 auto 30px; }
-        .controls { padding: 0 5%; max-width: 800px; margin: 0 auto 40px; text-align: center; }
-        #searchBar { width: 100%; padding: 15px 25px; border-radius: 12px; border: 1px solid var(--border-color); font-size: 16px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); margin-bottom: 20px; }
-        .filters { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-bottom: 30px; }
-        .filter-btn { padding: 8px 15px; border-radius: 20px; border: 1px solid var(--border-color); background: var(--white); cursor: pointer; font-size: 13px; font-weight: 500; transition: 0.3s; }
-        .filter-btn.active, .filter-btn:hover { background: var(--primary-color); color: white; border-color: var(--primary-color); }
-        .tools-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; padding: 0 5% 50px; }
-        .tool-card { background: var(--white); border: 1px solid var(--border-color); padding: 25px; border-radius: 16px; transition: 0.3s; position: relative; }
-        .tool-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-color: var(--primary-color); }
-        .badge { position: absolute; top: 15px; right: 15px; background: #e7f3ff; color: var(--primary-color); padding: 3px 10px; border-radius: 20px; font-size: 10px; font-weight: 700; text-transform: uppercase; }
-        .tool-logo { width: 40px; height: 40px; background: var(--secondary-color); border-radius: 8px; margin-bottom: 15px; display: flex; align-items: center; justify-content: center; font-weight: bold; color: var(--primary-color); }
-        .tool-card h3 { margin-bottom: 8px; font-size: 18px; }
-        .tool-card p { font-size: 13px; color: var(--light-text); margin-bottom: 20px; height: 40px; overflow: hidden; }
-        .btn-visit { display: block; text-align: center; padding: 10px; border: 1px solid var(--primary-color); color: var(--primary-color); text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 13px; transition: 0.3s; }
-        .btn-visit:hover { background: var(--primary-color); color: white; }
-        footer { text-align: center; padding: 40px; color: #999; font-size: 13px; }
+        :root {
+            --bg-color: #F5F7FA;
+            --header-grad: linear-gradient(135deg, #4169E1, #7B2FF7);
+            --card-bg: #FFFFFF;
+            --primary-btn: linear-gradient(135deg, #4169E1, #7B2FF7);
+            --text-main: #111827;
+            --text-sub: #6B7280;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+        body { background-color: var(--bg-color); color: var(--text-main); line-height: 1.6; padding-bottom: 50px; }
+
+        .header {
+            background: var(--header-grad);
+            padding: 90px 20px 110px;
+            text-align: center;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+            color: white;
+            box-shadow: 0 15px 40px rgba(123, 47, 247, 0.25);
+        }
+        .header h1 { font-size: 34px; font-weight: 800; margin-bottom: 12px; letter-spacing: -1px; }
+        .header p { font-size: 15px; opacity: 0.9; max-width: 320px; margin: 0 auto; line-height: 1.4; }
+
+        .search-area { margin: -35px 25px 35px; }
+        .search-box {
+            background: white; height: 64px; border-radius: 32px;
+            display: flex; align-items: center; padding: 0 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+        .search-box input { border: none; width: 100%; margin-left: 15px; font-size: 16px; outline: none; background: transparent; }
+
+        .categories { display: flex; overflow-x: auto; padding: 0 25px 30px; gap: 12px; scrollbar-width: none; }
+        .categories::-webkit-scrollbar { display: none; }
+        .cat-btn {
+            white-space: nowrap; padding: 12px 24px; background: #E8EDF5; border-radius: 25px;
+            font-size: 14px; font-weight: 600; color: var(--text-sub); border: none; transition: 0.3s;
+        }
+        .cat-btn.active { background: var(--primary-btn); color: white; box-shadow: 0 8px 20px rgba(65, 105, 225, 0.3); }
+
+        .tool-list { padding: 0 25px; max-width: 700px; margin: 0 auto; }
+        .tool-card {
+            background: var(--card-bg); border-radius: 28px; padding: 22px;
+            display: flex; align-items: center; margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: 0.4s;
+            border: 1px solid rgba(255,255,255,0.7);
+        }
+        .tool-card:hover { transform: scale(1.02); box-shadow: 0 12px 30px rgba(0,0,0,0.1); }
+
+        .logo-wrap {
+            width: 55px; height: 55px; border-radius: 18px;
+            background: #f8faff; display: flex; align-items: center;
+            justify-content: center; margin-right: 18px; border: 1px solid #eee;
+            overflow: hidden;
+        }
+        .logo-wrap img { width: 34px; height: 34px; object-fit: contain; }
+
+        .tool-content { flex-grow: 1; }
+        .tool-content h3 { font-size: 17px; font-weight: 700; color: #111; margin-bottom: 4px; }
+        .tool-content p { font-size: 12px; color: var(--text-sub); font-weight: 400; }
+
+        .visit-btn {
+            background: var(--primary-btn); color: white; padding: 12px 22px;
+            border-radius: 25px; font-size: 13px; font-weight: 700; text-decoration: none;
+            box-shadow: 0 6px 15px rgba(123, 47, 247, 0.2); transition: 0.3s;
+        }
+        .visit-btn:hover { box-shadow: 0 8px 25px rgba(123, 47, 247, 0.4); }
+
+        footer { margin-top: 60px; text-align: center; padding: 40px 20px; color: #9CA3AF; font-size: 13px; }
     </style>
 </head>
 <body>
 
-    <nav><a href="#" class="logo">Most AI Hub</a></nav>
+    <div class="header">
+        <h1>Most AI Hub</h1>
+        <p>Explore 30+ Powerful AI tools to boost your productivity & career</p>
+    </div>
 
-    <header class="hero">
-        <h1>Best <span style="color: var(--primary-color);">AI Tools</span> for Students</h1>
-        <p>Expertly curated AI directory by Mostafa. Explore tools that work!</p>
-    </header>
-
-    <div class="controls">
-        <input type="text" id="searchBar" placeholder="Search AI tools..." onkeyup="filterTools()">
-        <div class="filters">
-            <button class="filter-btn active" onclick="filterCategory('all', this)">All</button>
-            <button class="filter-btn" onclick="filterCategory('writing', this)">Writing</button>
-            <button class="filter-btn" onclick="filterCategory('resume', this)">Resume</button>
-            <button class="filter-btn" onclick="filterCategory('study', this)">Study</button>
-            <button class="filter-btn" onclick="filterCategory('productivity', this)">Productivity</button>
+    <div class="search-area">
+        <div class="search-box">
+            <span>🔍</span>
+            <input type="text" id="searchInput" placeholder="Search 30+ AI tools..." onkeyup="search()">
         </div>
     </div>
 
-    <section class="tools-grid" id="toolsGrid">
-        <!-- Writing Tools -->
-        <div class="tool-card" data-category="writing" data-name="grammarly"><span class="badge">Free</span><div class="tool-logo">G</div><h3>Grammarly</h3><p>AI Grammar and tone checker.</p><a href="https://www.grammarly.com" target="_blank" class="btn-visit">Visit Website</a></div>
-        <div class="tool-card" data-category="writing" data-name="quillbot"><span class="badge">Free</span><div class="tool-logo">Q</div><h3>Quillbot</h3><p>Best AI Paraphrasing tool.</p><a href="https://quillbot.com" target="_blank" class="btn-visit">Visit Website</a></div>
-        <div class="tool-card" data-category="writing" data-name="jasper"><span class="badge">Paid</span><div class="tool-logo">J</div><h3>Jasper AI</h3><p>Professional content writer.</p><a href="https://www.jasper.ai" target="_blank" class="btn-visit">Visit Website</a></div>
-        <div class="tool-card" data-category="writing" data-name="copyai"><span class="badge">Freemium</span><div class="tool-logo">C</div><h3>Copy.ai</h3><p>AI for marketing and emails.</p><a href="https://www.copy.ai" target="_blank" class="btn-visit">Visit Website</a></div>
+    <div class="categories">
+        <button class="cat-btn active" onclick="filter('all', this)">All Tools</button>
+        <button class="cat-btn" onclick="filter('writing', this)">Writing</button>
+        <button class="cat-btn" onclick="filter('study', this)">Study</button>
+        <button class="cat-btn" onclick="filter('resume', this)">Resume</button>
+        <button class="cat-btn" onclick="filter('design', this)">Design</button>
+        <button class="cat-btn" onclick="filter('productivity', this)">Productivity</button>
+    </div>
 
-        <!-- Resume Tools -->
-        <div class="tool-card" data-category="resume" data-name="rezi"><span class="badge">Freemium</span><div class="tool-logo">R</div><h3>Rezi.ai</h3><p>ATS-proof resume builder.</p><a href="https://www.rezi.ai" target="_blank" class="btn-visit">Visit Website</a></div>
-        <div class="tool-card" data-category="resume" data-name="kickresume"><span class="badge">Freemium</span><div class="tool-logo">K</div><h3>Kickresume</h3><p>Beautiful resume templates.</p><a href="https://www.kickresume.com" target="_blank" class="btn-visit">Visit Website</a></div>
-        <div class="tool-card" data-category="resume" data-name="resumeio"><span class="badge">Freemium</span><div class="tool-logo">RS</div><h3>Resume.io</h3><p>Easy online resume maker.</p><a href="https://resume.io" target="_blank" class="btn-visit">Visit Website</a></div>
+    <div class="tool-list" id="toolList">
+        <!-- JS will load tools here -->
+    </div>
 
-        <!-- Study Tools -->
-        <div class="tool-card" data-category="study" data-name="socratic"><span class="badge">Free</span><div class="tool-logo">S</div><h3>Socratic</h3><p>Homework helper by Google.</p><a href="https://socratic.org" target="_blank" class="btn-visit">Visit Website</a></div>
-        <div class="tool-card" data-category="study" data-name="wolframalpha"><span class="badge">Free</span><div class="tool-logo">W</div><h3>WolframAlpha</h3><p>Expert-level math engine.</p><a href="https://www.wolframalpha.com" target="_blank" class="btn-visit">Visit Website</a></div>
-        <div class="tool-card" data-category="study" data-name="chatgpt"><span class="badge">Free</span><div class="tool-logo">CP</div><h3>ChatGPT</h3><p>The ultimate AI assistant.</p><a href="https://chat.openai.com" target="_blank" class="btn-visit">Visit Website</a></div>
-
-        <!-- Productivity -->
-        <div class="tool-card" data-category="productivity" data-name="notion"><span class="badge">Free</span><div class="tool-logo">N</div><h3>Notion AI</h3><p>All-in-one workspace AI.</p><a href="https://www.notion.so" target="_blank" class="btn-visit">Visit Website</a></div>
-        <div class="tool-card" data-category="productivity" data-name="canva"><span class="badge">Freemium</span><div class="tool-logo">CV</div><h3>Canva Magic</h3><p>AI Design for everyone.</p><a href="https://www.canva.com" target="_blank" class="btn-visit">Visit Website</a></div>
-        <div class="tool-card" data-category="productivity" data-name="trello"><span class="badge">Free</span><div class="tool-logo">TR</div><h3>Trello</h3><p>Project management with AI.</p><a href="https://trello.com" target="_blank" class="btn-visit">Visit Website</a></div>
-        
-        <!-- Interview -->
-        <div class="tool-card" data-category="interview" data-name="warmup"><span class="badge">Free</span><div class="tool-logo">IW</div><h3>Interview Warmup</h3><p>Google's interview coach.</p><a href="https://grow.google/certificates/interview-warmup/" target="_blank" class="btn-visit">Visit Website</a></div>
-    </section>
-
-    <footer>&copy; 2024 Most AI Hub. Built with ❤️ for Students.</footer>
+    <footer>
+        <p>© 2026 Most AI Hub | Built by Mostafa</p>
+    </footer>
 
     <script>
-        function filterTools() {
-            let input = document.getElementById('searchBar').value.toLowerCase();
-            let cards = document.getElementsByClassName('tool-card');
-            for (let i = 0; i < cards.length; i++) {
-                let name = cards[i].getAttribute('data-name');
-                cards[i].style.display = name.includes(input) ? "" : "none";
-            }
+        const tools = [
+            // Study AI
+            { name: 'ChatGPT', cat: 'study', desc: 'World smartest AI assistant', domain: 'openai.com' },
+            { name: 'Perplexity AI', cat: 'study', desc: 'Real-time AI search engine', domain: 'perplexity.ai' },
+            { name: 'Socratic', cat: 'study', desc: 'Homework helper by Google', domain: 'socratic.org' },
+            { name: 'WolframAlpha', cat: 'study', desc: 'Math & science expert solver', domain: 'wolframalpha.com' },
+            { name: 'Claude AI', cat: 'study', desc: 'Advanced writing & coding AI', domain: 'anthropic.com' },
+            { name: 'Gemini', cat: 'study', desc: 'Google next-gen AI assistant', domain: 'gemini.google.com' },
+            { name: 'Elicit', cat: 'study', desc: 'AI research assistant', domain: 'elicit.org' },
+            { name: 'Mendeley', cat: 'study', desc: 'Reference manager for students', domain: 'mendeley.com' },
+
+            // Writing AI
+            { name: 'Grammarly', cat: 'writing', desc: 'AI grammar & tone checker', domain: 'grammarly.com' },
+            { name: 'Quillbot', cat: 'writing', desc: 'Best AI paraphrasing tool', domain: 'quillbot.com' },
+            { name: 'Jasper AI', cat: 'writing', desc: 'Pro content writing tool', domain: 'jasper.ai' },
+            { name: 'Copy.ai', cat: 'writing', desc: 'AI for marketing & emails', domain: 'copy.ai' },
+            { name: 'Hemingway', cat: 'writing', desc: 'Make writing bold and clear', domain: 'hemingwayapp.com' },
+            { name: 'Wordtune', cat: 'writing', desc: 'AI sentence rewriter', domain: 'wordtune.com' },
+            { name: 'Rytr', cat: 'writing', desc: 'Free AI writing assistant', domain: 'rytr.me' },
+
+            // Resume AI
+            { name: 'Rezi.ai', cat: 'resume', desc: 'ATS-proof resume builder', domain: 'rezi.ai' },
+            { name: 'Kickresume', cat: 'resume', desc: 'AI resume & cover letter', domain: 'kickresume.com' },
+            { name: 'Resume.io', cat: 'resume', desc: 'Easy online resume builder', domain: 'resume.io' },
+            { name: 'Enhancv', cat: 'resume', desc: 'Modern resume templates', domain: 'enhancv.com' },
+            { name: 'Zety', cat: 'resume', desc: 'Pro resume generator', domain: 'zety.com' },
+
+            // Design AI
+            { name: 'Canva Magic', cat: 'design', desc: 'AI design tools for all', domain: 'canva.com' },
+            { name: 'Leonardo.ai', cat: 'design', desc: 'AI image generation pro', domain: 'leonardo.ai' },
+            { name: 'Adobe Firefly', cat: 'design', desc: 'Generative art by Adobe', domain: 'adobe.com' },
+            { name: 'Midjourney', cat: 'design', desc: 'High-quality AI art', domain: 'midjourney.com' },
+            { name: 'Removal.ai', cat: 'design', desc: 'AI background remover', domain: 'removal.ai' },
+
+            // Productivity AI
+            { name: 'Notion AI', cat: 'productivity', desc: 'All-in-one smart workspace', domain: 'notion.so' },
+            { name: 'Otter.ai', cat: 'productivity', desc: 'AI meeting & lecture notes', domain: 'otter.ai' },
+            { name: 'Fireflies.ai', cat: 'productivity', desc: 'Record & transcribe meetings', domain: 'fireflies.ai' },
+            { name: 'Tome AI', cat: 'productivity', desc: 'AI presentation builder', domain: 'tome.app' },
+            { name: 'Trello', cat: 'productivity', desc: 'Manage projects with AI', domain: 'trello.com' }
+        ];
+
+        const toolList = document.getElementById('toolList');
+
+        function displayTools(data) {
+            toolList.innerHTML = '';
+            data.forEach(tool => {
+                const card = document.createElement('div');
+                card.className = 'tool-card';
+                card.setAttribute('data-cat', tool.cat);
+                card.setAttribute('data-name', tool.name.toLowerCase());
+
+                card.innerHTML = `
+                    <div class="logo-wrap">
+                        <img src="https://www.google.com/s2/favicons?domain=${tool.domain}&sz=128" alt="${tool.name}">
+                    </div>
+                    <div class="tool-content">
+                        <h3>${tool.name}</h3>
+                        <p>${tool.desc}</p>
+                    </div>
+                    <a href="https://${tool.domain}" target="_blank" class="visit-btn">Visit</a>
+                `;
+                toolList.appendChild(card);
+            });
         }
-        function filterCategory(category, btn) {
-            let cards = document.getElementsByClassName('tool-card');
-            let buttons = document.getElementsByClassName('filter-btn');
-            for (let b of buttons) b.classList.remove('active');
+
+        displayTools(tools);
+
+        function search() {
+            let q = document.getElementById('searchInput').value.toLowerCase();
+            let filtered = tools.filter(t => t.name.toLowerCase().includes(q));
+            displayTools(filtered);
+        }
+
+        function filter(cat, btn) {
+            let btns = document.getElementsByClassName('cat-btn');
+            for(let b of btns) b.classList.remove('active');
             btn.classList.add('active');
-            for (let i = 0; i < cards.length; i++) {
-                cards[i].style.display = (category === 'all' || cards[i].getAttribute('data-category') === category) ? "" : "none";
+
+            if(cat === 'all') {
+                displayTools(tools);
+            } else {
+                let filtered = tools.filter(t => t.cat === cat);
+                displayTools(filtered);
             }
         }
     </script>
