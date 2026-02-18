@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Most AI Hub - 30+ Best AI Tools</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Most AI Hub | 50+ Best AI Tools for Students</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
             --bg-color: #F5F7FA;
@@ -16,28 +16,31 @@
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
-        body { background-color: var(--bg-color); color: var(--text-main); line-height: 1.6; padding-bottom: 50px; }
+        body { background-color: var(--bg-color); color: var(--text-main); line-height: 1.6; padding-bottom: 30px; }
 
+        /* Premium Large Header */
         .header {
             background: var(--header-grad);
-            padding: 90px 20px 110px;
+            padding: 100px 20px 120px;
             text-align: center;
             border-bottom-left-radius: 50px;
             border-bottom-right-radius: 50px;
             color: white;
-            box-shadow: 0 15px 40px rgba(123, 47, 247, 0.25);
+            box-shadow: 0 15px 40px rgba(123, 47, 247, 0.2);
         }
-        .header h1 { font-size: 34px; font-weight: 800; margin-bottom: 12px; letter-spacing: -1px; }
-        .header p { font-size: 15px; opacity: 0.9; max-width: 320px; margin: 0 auto; line-height: 1.4; }
+        .header h1 { font-size: 38px; font-weight: 800; margin-bottom: 12px; letter-spacing: -1.5px; }
+        .header p { font-size: 16px; opacity: 0.9; max-width: 350px; margin: 0 auto; font-weight: 400; }
 
+        /* Search Area */
         .search-area { margin: -35px 25px 35px; }
         .search-box {
-            background: white; height: 64px; border-radius: 32px;
+            background: white; height: 68px; border-radius: 34px;
             display: flex; align-items: center; padding: 0 25px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.08);
         }
-        .search-box input { border: none; width: 100%; margin-left: 15px; font-size: 16px; outline: none; background: transparent; }
+        .search-box input { border: none; width: 100%; margin-left: 15px; font-size: 17px; outline: none; background: transparent; }
 
+        /* Category Scroll */
         .categories { display: flex; overflow-x: auto; padding: 0 25px 30px; gap: 12px; scrollbar-width: none; }
         .categories::-webkit-scrollbar { display: none; }
         .cat-btn {
@@ -46,109 +49,144 @@
         }
         .cat-btn.active { background: var(--primary-btn); color: white; box-shadow: 0 8px 20px rgba(65, 105, 225, 0.3); }
 
-        .tool-list { padding: 0 25px; max-width: 700px; margin: 0 auto; }
+        /* Tool Cards Listing */
+        .tool-list { padding: 0 20px; max-width: 750px; margin: 0 auto; display: grid; grid-template-columns: 1fr; gap: 15px; }
         .tool-card {
-            background: var(--card-bg); border-radius: 28px; padding: 22px;
-            display: flex; align-items: center; margin-bottom: 20px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: 0.4s;
-            border: 1px solid rgba(255,255,255,0.7);
+            background: var(--card-bg); border-radius: 28px; padding: 20px;
+            display: flex; align-items: center; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03); transition: 0.4s;
+            border: 1px solid #f0f0f0;
         }
         .tool-card:hover { transform: scale(1.02); box-shadow: 0 12px 30px rgba(0,0,0,0.1); }
 
         .logo-wrap {
-            width: 55px; height: 55px; border-radius: 18px;
+            width: 55px; height: 55px; border-radius: 16px;
             background: #f8faff; display: flex; align-items: center;
             justify-content: center; margin-right: 18px; border: 1px solid #eee;
             overflow: hidden;
         }
-        .logo-wrap img { width: 34px; height: 34px; object-fit: contain; }
+        .logo-wrap img { width: 36px; height: 36px; object-fit: contain; }
 
         .tool-content { flex-grow: 1; }
-        .tool-content h3 { font-size: 17px; font-weight: 700; color: #111; margin-bottom: 4px; }
+        .tool-content h3 { font-size: 17px; font-weight: 700; color: #111; }
         .tool-content p { font-size: 12px; color: var(--text-sub); font-weight: 400; }
 
         .visit-btn {
-            background: var(--primary-btn); color: white; padding: 12px 22px;
-            border-radius: 25px; font-size: 13px; font-weight: 700; text-decoration: none;
-            box-shadow: 0 6px 15px rgba(123, 47, 247, 0.2); transition: 0.3s;
+            background: var(--primary-btn); color: white; padding: 12px 24px;
+            border-radius: 22px; font-size: 13px; font-weight: 700; text-decoration: none;
+            box-shadow: 0 6px 15px rgba(123, 47, 247, 0.2);
         }
-        .visit-btn:hover { box-shadow: 0 8px 25px rgba(123, 47, 247, 0.4); }
 
-        footer { margin-top: 60px; text-align: center; padding: 40px 20px; color: #9CA3AF; font-size: 13px; }
+        /* Subtle Premium Banner at Bottom */
+        .premium-banner {
+            margin: 60px 25px 20px; padding: 35px; background: #0F172A;
+            border-radius: 40px; color: white; text-align: center;
+        }
+        .premium-banner h2 { color: #FFD700; margin-bottom: 10px; font-size: 24px; }
+        .btn-gold { background: #FFD700; color: #000; padding: 14px 30px; border-radius: 30px; text-decoration: none; font-weight: 800; display: inline-block; margin-top: 15px; }
+
+        footer { text-align: center; padding: 50px 20px; color: #9CA3AF; font-size: 12px; }
     </style>
 </head>
 <body>
 
     <div class="header">
         <h1>Most AI Hub</h1>
-        <p>Explore 30+ Powerful AI tools to boost your productivity & career</p>
+        <p>Your Free Library of 50+ Powerful AI Tools for Success</p>
     </div>
 
     <div class="search-area">
         <div class="search-box">
             <span>🔍</span>
-            <input type="text" id="searchInput" placeholder="Search 30+ AI tools..." onkeyup="search()">
+            <input type="text" id="searchInput" placeholder="Search 50+ AI tools..." onkeyup="search()">
         </div>
     </div>
 
     <div class="categories">
         <button class="cat-btn active" onclick="filter('all', this)">All Tools</button>
-        <button class="cat-btn" onclick="filter('writing', this)">Writing</button>
-        <button class="cat-btn" onclick="filter('study', this)">Study</button>
-        <button class="cat-btn" onclick="filter('resume', this)">Resume</button>
-        <button class="cat-btn" onclick="filter('design', this)">Design</button>
-        <button class="cat-btn" onclick="filter('productivity', this)">Productivity</button>
+        <button class="cat-btn" onclick="filter('study', this)">Study Aid</button>
+        <button class="cat-btn" onclick="filter('writing', this)">AI Writing</button>
+        <button class="cat-btn" onclick="filter('career', this)">Career & Job</button>
+        <button class="cat-btn" onclick="filter('design', this)">Design & Creative</button>
+        <button class="cat-btn" onclick="filter('business', this)">Business & Money</button>
     </div>
 
     <div class="tool-list" id="toolList">
-        <!-- JS will load tools here -->
+        <!-- Tools will be injected here -->
+    </div>
+
+    <!-- Premium option moved to the bottom -->
+    <div class="premium-banner">
+        <h2>Want More Power?</h2>
+        <p>Unlock our exclusive 500+ AI Prompt Library & VIP Guides.</p>
+        <a href="#" class="btn-gold">Join Pro - ₹999</a>
     </div>
 
     <footer>
-        <p>© 2026 Most AI Hub | Built by Mostafa</p>
+        <p>© 2026 Most AI Hub | Built for Students by Mostafa</p>
     </footer>
 
     <script>
         const tools = [
-            // Study AI
-            { name: 'ChatGPT', cat: 'study', desc: 'World smartest AI assistant', domain: 'openai.com' },
-            { name: 'Perplexity AI', cat: 'study', desc: 'Real-time AI search engine', domain: 'perplexity.ai' },
-            { name: 'Socratic', cat: 'study', desc: 'Homework helper by Google', domain: 'socratic.org' },
-            { name: 'WolframAlpha', cat: 'study', desc: 'Math & science expert solver', domain: 'wolframalpha.com' },
-            { name: 'Claude AI', cat: 'study', desc: 'Advanced writing & coding AI', domain: 'anthropic.com' },
-            { name: 'Gemini', cat: 'study', desc: 'Google next-gen AI assistant', domain: 'gemini.google.com' },
-            { name: 'Elicit', cat: 'study', desc: 'AI research assistant', domain: 'elicit.org' },
-            { name: 'Mendeley', cat: 'study', desc: 'Reference manager for students', domain: 'mendeley.com' },
+            // STUDY AID
+            { name: 'ChatGPT', cat: 'study', desc: 'Powerful AI for research & learning.', domain: 'openai.com' },
+            { name: 'Gemini', cat: 'study', desc: 'Googles smartest AI assistant.', domain: 'gemini.google.com' },
+            { name: 'Perplexity', cat: 'study', desc: 'AI search engine with real-time data.', domain: 'perplexity.ai' },
+            { name: 'Claude AI', cat: 'study', desc: 'Expert in coding and deep writing.', domain: 'anthropic.com' },
+            { name: 'Socratic', cat: 'study', desc: 'Visual helper for math & science.', domain: 'socratic.org' },
+            { name: 'WolframAlpha', cat: 'study', desc: 'Expert engine for complex math.', domain: 'wolframalpha.com' },
+            { name: 'Elicit', cat: 'study', desc: 'AI research assistant for papers.', domain: 'elicit.org' },
+            { name: 'Tutor AI', cat: 'study', desc: 'Learn any topic like a teacher.', domain: 'tutorai.me' },
+            { name: 'Mendeley', cat: 'study', desc: 'Best tool for student references.', domain: 'mendeley.com' },
+            { name: 'Otter.ai', cat: 'study', desc: 'Turn lectures into text notes.', domain: 'otter.ai' },
 
-            // Writing AI
-            { name: 'Grammarly', cat: 'writing', desc: 'AI grammar & tone checker', domain: 'grammarly.com' },
-            { name: 'Quillbot', cat: 'writing', desc: 'Best AI paraphrasing tool', domain: 'quillbot.com' },
-            { name: 'Jasper AI', cat: 'writing', desc: 'Pro content writing tool', domain: 'jasper.ai' },
-            { name: 'Copy.ai', cat: 'writing', desc: 'AI for marketing & emails', domain: 'copy.ai' },
-            { name: 'Hemingway', cat: 'writing', desc: 'Make writing bold and clear', domain: 'hemingwayapp.com' },
-            { name: 'Wordtune', cat: 'writing', desc: 'AI sentence rewriter', domain: 'wordtune.com' },
-            { name: 'Rytr', cat: 'writing', desc: 'Free AI writing assistant', domain: 'rytr.me' },
+            // WRITING
+            { name: 'Grammarly', cat: 'writing', desc: 'Fix your grammar and tone instantly.', domain: 'grammarly.com' },
+            { name: 'Quillbot', cat: 'writing', desc: 'Best AI paraphrasing tool.', domain: 'quillbot.com' },
+            { name: 'Jasper AI', cat: 'writing', desc: 'Pro content writing for blogs.', domain: 'jasper.ai' },
+            { name: 'Hemingway', cat: 'writing', desc: 'Make your writing bold and clear.', domain: 'hemingwayapp.com' },
+            { name: 'Wordtune', cat: 'writing', desc: 'Rewrite sentences professionally.', domain: 'wordtune.com' },
+            { name: 'Rytr', cat: 'writing', desc: 'AI for emails and short stories.', domain: 'rytr.me' },
+            { name: 'Copy.ai', cat: 'writing', desc: 'Perfect for social media captions.', domain: 'copy.ai' },
+            { name: 'Writesonic', cat: 'writing', desc: 'SEO content generation AI.', domain: 'writesonic.com' },
+            { name: 'ProWritingAid', cat: 'writing', desc: 'Advanced analysis for long essays.', domain: 'prowritingaid.com' },
+            { name: 'Anyword', cat: 'writing', desc: 'Predictive writing for sales.', domain: 'anyword.com' },
 
-            // Resume AI
-            { name: 'Rezi.ai', cat: 'resume', desc: 'ATS-proof resume builder', domain: 'rezi.ai' },
-            { name: 'Kickresume', cat: 'resume', desc: 'AI resume & cover letter', domain: 'kickresume.com' },
-            { name: 'Resume.io', cat: 'resume', desc: 'Easy online resume builder', domain: 'resume.io' },
-            { name: 'Enhancv', cat: 'resume', desc: 'Modern resume templates', domain: 'enhancv.com' },
-            { name: 'Zety', cat: 'resume', desc: 'Pro resume generator', domain: 'zety.com' },
+            // CAREER & JOB
+            { name: 'Rezi.ai', cat: 'career', desc: 'ATS-optimized resume builder.', domain: 'rezi.ai' },
+            { name: 'Kickresume', cat: 'career', desc: 'AI-powered resume & cover letters.', domain: 'kickresume.com' },
+            { name: 'Resume.io', cat: 'career', desc: 'Build pro resumes in minutes.', domain: 'resume.io' },
+            { name: 'Enhancv', cat: 'career', desc: 'Modern resume designs that work.', domain: 'enhancv.com' },
+            { name: 'Google Warmup', cat: 'career', desc: 'Practice interviews with AI.', domain: 'grow.google' },
+            { name: 'Zety', cat: 'career', desc: 'Fast online resume generator.', domain: 'zety.com' },
+            { name: 'HiredScore', cat: 'career', desc: 'AI for matching jobs with you.', domain: 'hiredscore.com' },
+            { name: 'Interviewer.ai', cat: 'career', desc: 'Mock interview training system.', domain: 'interviewer.ai' },
+            { name: 'JobScan', cat: 'career', desc: 'Compare resume with job posts.', domain: 'jobscan.co' },
+            { name: 'Novoresume', cat: 'career', desc: 'Visual resume builder for freshers.', domain: 'novoresume.com' },
 
-            // Design AI
-            { name: 'Canva Magic', cat: 'design', desc: 'AI design tools for all', domain: 'canva.com' },
-            { name: 'Leonardo.ai', cat: 'design', desc: 'AI image generation pro', domain: 'leonardo.ai' },
-            { name: 'Adobe Firefly', cat: 'design', desc: 'Generative art by Adobe', domain: 'adobe.com' },
-            { name: 'Midjourney', cat: 'design', desc: 'High-quality AI art', domain: 'midjourney.com' },
-            { name: 'Removal.ai', cat: 'design', desc: 'AI background remover', domain: 'removal.ai' },
+            // DESIGN & CREATIVE
+            { name: 'Canva Magic', cat: 'design', desc: 'Design anything with AI tools.', domain: 'canva.com' },
+            { name: 'Leonardo AI', cat: 'design', desc: 'High-end AI image generation.', domain: 'leonardo.ai' },
+            { name: 'Adobe Firefly', cat: 'design', desc: 'Pro AI art by Adobe.', domain: 'adobe.com' },
+            { name: 'Midjourney', cat: 'design', desc: 'Worlds best AI art creator.', domain: 'midjourney.com' },
+            { name: 'Removal.ai', cat: 'design', desc: 'Fast background remover tool.', domain: 'removal.ai' },
+            { name: 'Looka', cat: 'design', desc: 'AI logo maker for your brand.', domain: 'looka.com' },
+            { name: 'Runway', cat: 'design', desc: 'AI video editing tools.', domain: 'runwayml.com' },
+            { name: 'Pika Art', cat: 'design', desc: 'Text to high-quality video.', domain: 'pika.art' },
+            { name: 'ClipDrop', cat: 'design', desc: 'Powerful photo clean-up tool.', domain: 'clipdrop.co' },
+            { name: 'Pixlr AI', cat: 'design', desc: 'Online AI photo editor.', domain: 'pixlr.com' },
 
-            // Productivity AI
-            { name: 'Notion AI', cat: 'productivity', desc: 'All-in-one smart workspace', domain: 'notion.so' },
-            { name: 'Otter.ai', cat: 'productivity', desc: 'AI meeting & lecture notes', domain: 'otter.ai' },
-            { name: 'Fireflies.ai', cat: 'productivity', desc: 'Record & transcribe meetings', domain: 'fireflies.ai' },
-            { name: 'Tome AI', cat: 'productivity', desc: 'AI presentation builder', domain: 'tome.app' },
-            { name: 'Trello', cat: 'productivity', desc: 'Manage projects with AI', domain: 'trello.com' }
+            // BUSINESS & MONEY
+            { name: '10Web', cat: 'business', desc: 'AI website builder for business.', domain: '10web.io' },
+            { name: 'Durable', cat: 'business', desc: 'Build a website in 30 seconds.', domain: 'durable.co' },
+            { name: 'Gamma AI', cat: 'business', desc: 'AI for slides and websites.', domain: 'gamma.app' },
+            { name: 'Fiverr AI', cat: 'business', desc: 'Find AI freelance opportunities.', domain: 'fiverr.com' },
+            { name: 'Notion AI', cat: 'business', desc: 'Work smarter with AI workspace.', domain: 'notion.so' },
+            { name: 'Trello', cat: 'business', desc: 'Manage freelance projects with AI.', domain: 'trello.com' },
+            { name: 'Clockwise', cat: 'business', desc: 'AI calendar for productivity.', domain: 'getclockwise.com' },
+            { name: 'Todoist AI', cat: 'business', desc: 'Smart task management AI.', domain: 'todoist.com' },
+            { name: 'Fireflies', cat: 'business', desc: 'Record and search meetings.', domain: 'fireflies.ai' },
+            { name: 'Synthesia', cat: 'business', desc: 'AI video creation with avatars.', domain: 'synthesia.io' }
         ];
 
         const toolList = document.getElementById('toolList');
@@ -158,9 +196,6 @@
             data.forEach(tool => {
                 const card = document.createElement('div');
                 card.className = 'tool-card';
-                card.setAttribute('data-cat', tool.cat);
-                card.setAttribute('data-name', tool.name.toLowerCase());
-
                 card.innerHTML = `
                     <div class="logo-wrap">
                         <img src="https://www.google.com/s2/favicons?domain=${tool.domain}&sz=128" alt="${tool.name}">
@@ -179,21 +214,14 @@
 
         function search() {
             let q = document.getElementById('searchInput').value.toLowerCase();
-            let filtered = tools.filter(t => t.name.toLowerCase().includes(q));
-            displayTools(filtered);
+            displayTools(tools.filter(t => t.name.toLowerCase().includes(q)));
         }
 
         function filter(cat, btn) {
-            let btns = document.getElementsByClassName('cat-btn');
-            for(let b of btns) b.classList.remove('active');
+            document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
-
-            if(cat === 'all') {
-                displayTools(tools);
-            } else {
-                let filtered = tools.filter(t => t.cat === cat);
-                displayTools(filtered);
-            }
+            if(cat === 'all') displayTools(tools);
+            else displayTools(tools.filter(t => t.cat === cat));
         }
     </script>
 </body>
