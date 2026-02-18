@@ -3,226 +3,188 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Most AI Hub | 50+ Best AI Tools for Students</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Most AI Hub | 50+ Best Free AI Tools for Students</title>
+    
+    <!-- SEO & Trust Settings -->
+    <meta name="description" content="Discover 50+ handpicked AI tools for students. Join 5,000+ others finding free AI tools for exams and career growth.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
     <style>
         :root {
-            --bg-color: #F5F7FA;
-            --header-grad: linear-gradient(135deg, #4169E1, #7B2FF7);
-            --card-bg: #FFFFFF;
-            --primary-btn: linear-gradient(135deg, #4169E1, #7B2FF7);
-            --text-main: #111827;
-            --text-sub: #6B7280;
+            --bg: #F8FAFC;
+            --primary: #4169E1;
+            --secondary: #7B2FF7;
+            --dark: #0F172A;
+            --white: #FFFFFF;
+            --gold: #FBBF24;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
-        body { background-color: var(--bg-color); color: var(--text-main); line-height: 1.6; padding-bottom: 30px; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        body { background: var(--bg); color: #1E293B; line-height: 1.6; }
 
-        /* Premium Large Header */
-        .header {
-            background: var(--header-grad);
-            padding: 100px 20px 120px;
+        /* HERO SECTION */
+        .hero {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            padding: 80px 20px 100px;
             text-align: center;
+            color: white;
             border-bottom-left-radius: 50px;
             border-bottom-right-radius: 50px;
-            color: white;
-            box-shadow: 0 15px 40px rgba(123, 47, 247, 0.2);
+            box-shadow: 0 10px 30px rgba(65, 105, 225, 0.2);
         }
-        .header h1 { font-size: 38px; font-weight: 800; margin-bottom: 12px; letter-spacing: -1.5px; }
-        .header p { font-size: 16px; opacity: 0.9; max-width: 350px; margin: 0 auto; font-weight: 400; }
+        .hero h1 { font-size: 34px; font-weight: 800; margin-bottom: 15px; }
+        .update-badge { font-size: 11px; background: rgba(255,255,255,0.2); padding: 6px 15px; border-radius: 20px; display: inline-block; margin-bottom: 15px; font-weight: 600; }
 
-        /* Search Area */
-        .search-area { margin: -35px 25px 35px; }
-        .search-box {
-            background: white; height: 68px; border-radius: 34px;
-            display: flex; align-items: center; padding: 0 25px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        /* TRUST SECTION */
+        .trust-bar {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+            margin: -30px 20px 30px; padding: 0;
         }
-        .search-box input { border: none; width: 100%; margin-left: 15px; font-size: 17px; outline: none; background: transparent; }
-
-        /* Category Scroll */
-        .categories { display: flex; overflow-x: auto; padding: 0 25px 30px; gap: 12px; scrollbar-width: none; }
-        .categories::-webkit-scrollbar { display: none; }
-        .cat-btn {
-            white-space: nowrap; padding: 12px 24px; background: #E8EDF5; border-radius: 25px;
-            font-size: 14px; font-weight: 600; color: var(--text-sub); border: none; transition: 0.3s;
+        .trust-item {
+            background: white; padding: 15px; border-radius: 20px;
+            text-align: center; box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            font-size: 11px; font-weight: 700; color: var(--primary);
+            border: 1px solid #f1f5f9;
         }
-        .cat-btn.active { background: var(--primary-btn); color: white; box-shadow: 0 8px 20px rgba(65, 105, 225, 0.3); }
 
-        /* Tool Cards Listing */
-        .tool-list { padding: 0 20px; max-width: 750px; margin: 0 auto; display: grid; grid-template-columns: 1fr; gap: 15px; }
+        /* TOOL LIST */
+        .container { padding: 20px; max-width: 800px; margin: 0 auto; }
+        .section-title { margin: 30px 0 20px; font-size: 22px; font-weight: 800; }
+        
         .tool-card {
-            background: var(--card-bg); border-radius: 28px; padding: 20px;
-            display: flex; align-items: center; 
-            box-shadow: 0 4px 15px rgba(0,0,0,0.03); transition: 0.4s;
-            border: 1px solid #f0f0f0;
+            background: white; border-radius: 25px; padding: 22px;
+            display: flex; align-items: center; margin-bottom: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.02); transition: 0.3s;
+            border: 1px solid #f1f5f9;
         }
-        .tool-card:hover { transform: scale(1.02); box-shadow: 0 12px 30px rgba(0,0,0,0.1); }
+        .tool-card:hover { transform: scale(1.02); box-shadow: 0 15px 35px rgba(0,0,0,0.08); }
+        .tool-logo { width: 52px; height: 52px; border-radius: 12px; margin-right: 15px; border: 1px solid #eee; }
+        .tool-info { flex: 1; }
+        .tool-info h3 { font-size: 17px; font-weight: 700; margin-bottom: 2px; }
+        .tool-info p { font-size: 12px; color: #64748B; }
 
-        .logo-wrap {
-            width: 55px; height: 55px; border-radius: 16px;
-            background: #f8faff; display: flex; align-items: center;
-            justify-content: center; margin-right: 18px; border: 1px solid #eee;
-            overflow: hidden;
-        }
-        .logo-wrap img { width: 36px; height: 36px; object-fit: contain; }
-
-        .tool-content { flex-grow: 1; }
-        .tool-content h3 { font-size: 17px; font-weight: 700; color: #111; }
-        .tool-content p { font-size: 12px; color: var(--text-sub); font-weight: 400; }
-
-        .visit-btn {
-            background: var(--primary-btn); color: white; padding: 12px 24px;
-            border-radius: 22px; font-size: 13px; font-weight: 700; text-decoration: none;
-            box-shadow: 0 6px 15px rgba(123, 47, 247, 0.2);
+        .btn-visit {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white; padding: 12px 22px; border-radius: 18px;
+            text-decoration: none; font-size: 13px; font-weight: 700;
+            box-shadow: 0 5px 15px rgba(123, 47, 247, 0.2);
         }
 
-        /* Subtle Premium Banner at Bottom */
-        .premium-banner {
-            margin: 60px 25px 20px; padding: 35px; background: #0F172A;
-            border-radius: 40px; color: white; text-align: center;
+        /* EMAIL CAPTURE */
+        .email-box {
+            background: var(--dark); color: white; padding: 40px 25px;
+            border-radius: 40px; text-align: center; margin: 40px 0;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
         }
-        .premium-banner h2 { color: #FFD700; margin-bottom: 10px; font-size: 24px; }
-        .btn-gold { background: #FFD700; color: #000; padding: 14px 30px; border-radius: 30px; text-decoration: none; font-weight: 800; display: inline-block; margin-top: 15px; }
+        .email-box h2 { color: var(--gold); font-size: 24px; margin-bottom: 10px; }
+        .counter { font-size: 13px; color: #94a3b8; margin-bottom: 20px; font-weight: 500; }
+        .email-box input { width: 100%; padding: 18px; border-radius: 20px; border: none; margin-bottom: 15px; font-size: 15px; outline: none; }
+        .btn-join { background: var(--primary); color: white; width: 100%; padding: 18px; border-radius: 20px; border: none; font-weight: 800; cursor: pointer; font-size: 15px; }
 
-        footer { text-align: center; padding: 50px 20px; color: #9CA3AF; font-size: 12px; }
+        /* PREMIUM URGENCY */
+        .premium-card {
+            background: #FFFFFF; border: 3px solid var(--gold);
+            padding: 35px 25px; border-radius: 40px; text-align: center; margin: 40px 0;
+            position: relative; overflow: hidden;
+        }
+        .premium-card::before { content: "BEST VALUE"; position: absolute; top: 20px; right: -30px; background: var(--gold); color: #000; padding: 5px 40px; font-size: 10px; font-weight: 900; transform: rotate(45deg); }
+        .price { font-size: 45px; font-weight: 900; color: var(--dark); margin: 10px 0; }
+        .urgency { color: #dc2626; font-size: 13px; font-weight: 700; margin-bottom: 20px; }
+
+        /* STICKY EXPLORE BUTTON */
+        .sticky-btn {
+            position: fixed; bottom: 25px; left: 25px; right: 25px;
+            background: var(--dark); color: white; padding: 18px;
+            border-radius: 25px; text-align: center; font-weight: 800;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3); text-decoration: none; z-index: 1000;
+            transition: 0.3s;
+        }
+        .sticky-btn:active { transform: scale(0.95); }
+
+        footer { text-align: center; padding: 60px 20px 120px; color: #94a3b8; font-size: 12px; border-top: 1px solid #eee; }
     </style>
 </head>
 <body>
 
-    <div class="header">
-        <h1>Most AI Hub</h1>
-        <p>Your Free Library of 50+ Powerful AI Tools for Success</p>
+    <section class="hero">
+        <div class="update-badge" id="updateText">Last Updated: Loading...</div>
+        <h1>50+ Free AI Tools for Students & Job Seekers</h1>
+        <p>Expertly curated by Mostafa to help you study smarter and land your dream job in 2026.</p>
+    </section>
+
+    <div class="trust-bar">
+        <div class="trust-item">✅ Handpicked Tools</div>
+        <div class="trust-item">🛡️ No Spam Links</div>
+        <div class="trust-item">🔥 Updated Weekly</div>
+        <div class="trust-item">🎓 Student Friendly</div>
     </div>
 
-    <div class="search-area">
-        <div class="search-box">
-            <span>🔍</span>
-            <input type="text" id="searchInput" placeholder="Search 50+ AI tools..." onkeyup="search()">
+    <div class="container">
+        <h2 class="section-title">Most Popular AI Tools</h2>
+        <div id="toolsGrid"></div>
+
+        <!-- EMAIL CAPTURE SYSTEM (PHASE 4) -->
+        <div class="email-box">
+            <h2>Get 50 AI Prompts + Weekly Updates</h2>
+            <p class="counter">🔥 5,231 students joined this week</p>
+            <input type="email" placeholder="Enter your best email address...">
+            <button class="btn-join">Send Me The PDF Guide</button>
+            <p style="font-size:10px; margin-top:10px; opacity:0.6;">No spam. Unsubscribe anytime.</p>
+        </div>
+
+        <!-- PREMIUM SECTION (PHASE 5) -->
+        <div class="premium-card">
+            <h3 style="font-size: 20px;">Most AI Hub Premium</h3>
+            <div class="price" id="displayPrice">₹999</div>
+            <p class="urgency">⚠️ Limited Time Offer! Price increasing soon.</p>
+            <p style="font-size: 14px; color: #64748B; margin-bottom: 25px;">Get 500+ Prompts, Resume Packs & VIP AI Guides.</p>
+            <a href="#" class="btn-visit" style="display:block; padding:20px; font-size:16px;">Unlock Premium Now</a>
+        </div>
+
+        <div style="margin-top:50px; text-align:center;">
+            <h3 style="margin-bottom:10px;">Why Trust Us?</h3>
+            <p style="font-size:13px; color:#64748B;">At Most AI Hub, we manually test every tool to ensure it's truly useful for career growth. No ads, no clutter, just tools that work.</p>
         </div>
     </div>
 
-    <div class="categories">
-        <button class="cat-btn active" onclick="filter('all', this)">All Tools</button>
-        <button class="cat-btn" onclick="filter('study', this)">Study Aid</button>
-        <button class="cat-btn" onclick="filter('writing', this)">AI Writing</button>
-        <button class="cat-btn" onclick="filter('career', this)">Career & Job</button>
-        <button class="cat-btn" onclick="filter('design', this)">Design & Creative</button>
-        <button class="cat-btn" onclick="filter('business', this)">Business & Money</button>
-    </div>
-
-    <div class="tool-list" id="toolList">
-        <!-- Tools will be injected here -->
-    </div>
-
-    <!-- Premium option moved to the bottom -->
-    <div class="premium-banner">
-        <h2>Want More Power?</h2>
-        <p>Unlock our exclusive 500+ AI Prompt Library & VIP Guides.</p>
-        <a href="#" class="btn-gold">Join Pro - ₹999</a>
-    </div>
+    <a href="#toolsGrid" class="sticky-btn">Explore 50+ AI Tools</a>
 
     <footer>
-        <p>© 2026 Most AI Hub | Built for Students by Mostafa</p>
+        <p>© 2026 Most AI Hub | Built with ❤️ by Mostafa</p>
     </footer>
 
+    <!-- DYNAMIC SYSTEM SCRIPT -->
+    <script src="affiliate-config.js"></script>
     <script>
-        const tools = [
-            // STUDY AID
-            { name: 'ChatGPT', cat: 'study', desc: 'Powerful AI for research & learning.', domain: 'openai.com' },
-            { name: 'Gemini', cat: 'study', desc: 'Googles smartest AI assistant.', domain: 'gemini.google.com' },
-            { name: 'Perplexity', cat: 'study', desc: 'AI search engine with real-time data.', domain: 'perplexity.ai' },
-            { name: 'Claude AI', cat: 'study', desc: 'Expert in coding and deep writing.', domain: 'anthropic.com' },
-            { name: 'Socratic', cat: 'study', desc: 'Visual helper for math & science.', domain: 'socratic.org' },
-            { name: 'WolframAlpha', cat: 'study', desc: 'Expert engine for complex math.', domain: 'wolframalpha.com' },
-            { name: 'Elicit', cat: 'study', desc: 'AI research assistant for papers.', domain: 'elicit.org' },
-            { name: 'Tutor AI', cat: 'study', desc: 'Learn any topic like a teacher.', domain: 'tutorai.me' },
-            { name: 'Mendeley', cat: 'study', desc: 'Best tool for student references.', domain: 'mendeley.com' },
-            { name: 'Otter.ai', cat: 'study', desc: 'Turn lectures into text notes.', domain: 'otter.ai' },
+        // কন্ট্রোল রুম থেকে তথ্য বসানো
+        document.getElementById('updateText').innerText = "Last Updated: " + affiliateConfig.lastUpdated;
+        document.getElementById('displayPrice').innerText = affiliateConfig.premiumPrice;
 
-            // WRITING
-            { name: 'Grammarly', cat: 'writing', desc: 'Fix your grammar and tone instantly.', domain: 'grammarly.com' },
-            { name: 'Quillbot', cat: 'writing', desc: 'Best AI paraphrasing tool.', domain: 'quillbot.com' },
-            { name: 'Jasper AI', cat: 'writing', desc: 'Pro content writing for blogs.', domain: 'jasper.ai' },
-            { name: 'Hemingway', cat: 'writing', desc: 'Make your writing bold and clear.', domain: 'hemingwayapp.com' },
-            { name: 'Wordtune', cat: 'writing', desc: 'Rewrite sentences professionally.', domain: 'wordtune.com' },
-            { name: 'Rytr', cat: 'writing', desc: 'AI for emails and short stories.', domain: 'rytr.me' },
-            { name: 'Copy.ai', cat: 'writing', desc: 'Perfect for social media captions.', domain: 'copy.ai' },
-            { name: 'Writesonic', cat: 'writing', desc: 'SEO content generation AI.', domain: 'writesonic.com' },
-            { name: 'ProWritingAid', cat: 'writing', desc: 'Advanced analysis for long essays.', domain: 'prowritingaid.com' },
-            { name: 'Anyword', cat: 'writing', desc: 'Predictive writing for sales.', domain: 'anyword.com' },
-
-            // CAREER & JOB
-            { name: 'Rezi.ai', cat: 'career', desc: 'ATS-optimized resume builder.', domain: 'rezi.ai' },
-            { name: 'Kickresume', cat: 'career', desc: 'AI-powered resume & cover letters.', domain: 'kickresume.com' },
-            { name: 'Resume.io', cat: 'career', desc: 'Build pro resumes in minutes.', domain: 'resume.io' },
-            { name: 'Enhancv', cat: 'career', desc: 'Modern resume designs that work.', domain: 'enhancv.com' },
-            { name: 'Google Warmup', cat: 'career', desc: 'Practice interviews with AI.', domain: 'grow.google' },
-            { name: 'Zety', cat: 'career', desc: 'Fast online resume generator.', domain: 'zety.com' },
-            { name: 'HiredScore', cat: 'career', desc: 'AI for matching jobs with you.', domain: 'hiredscore.com' },
-            { name: 'Interviewer.ai', cat: 'career', desc: 'Mock interview training system.', domain: 'interviewer.ai' },
-            { name: 'JobScan', cat: 'career', desc: 'Compare resume with job posts.', domain: 'jobscan.co' },
-            { name: 'Novoresume', cat: 'career', desc: 'Visual resume builder for freshers.', domain: 'novoresume.com' },
-
-            // DESIGN & CREATIVE
-            { name: 'Canva Magic', cat: 'design', desc: 'Design anything with AI tools.', domain: 'canva.com' },
-            { name: 'Leonardo AI', cat: 'design', desc: 'High-end AI image generation.', domain: 'leonardo.ai' },
-            { name: 'Adobe Firefly', cat: 'design', desc: 'Pro AI art by Adobe.', domain: 'adobe.com' },
-            { name: 'Midjourney', cat: 'design', desc: 'Worlds best AI art creator.', domain: 'midjourney.com' },
-            { name: 'Removal.ai', cat: 'design', desc: 'Fast background remover tool.', domain: 'removal.ai' },
-            { name: 'Looka', cat: 'design', desc: 'AI logo maker for your brand.', domain: 'looka.com' },
-            { name: 'Runway', cat: 'design', desc: 'AI video editing tools.', domain: 'runwayml.com' },
-            { name: 'Pika Art', cat: 'design', desc: 'Text to high-quality video.', domain: 'pika.art' },
-            { name: 'ClipDrop', cat: 'design', desc: 'Powerful photo clean-up tool.', domain: 'clipdrop.co' },
-            { name: 'Pixlr AI', cat: 'design', desc: 'Online AI photo editor.', domain: 'pixlr.com' },
-
-            // BUSINESS & MONEY
-            { name: '10Web', cat: 'business', desc: 'AI website builder for business.', domain: '10web.io' },
-            { name: 'Durable', cat: 'business', desc: 'Build a website in 30 seconds.', domain: 'durable.co' },
-            { name: 'Gamma AI', cat: 'business', desc: 'AI for slides and websites.', domain: 'gamma.app' },
-            { name: 'Fiverr AI', cat: 'business', desc: 'Find AI freelance opportunities.', domain: 'fiverr.com' },
-            { name: 'Notion AI', cat: 'business', desc: 'Work smarter with AI workspace.', domain: 'notion.so' },
-            { name: 'Trello', cat: 'business', desc: 'Manage freelance projects with AI.', domain: 'trello.com' },
-            { name: 'Clockwise', cat: 'business', desc: 'AI calendar for productivity.', domain: 'getclockwise.com' },
-            { name: 'Todoist AI', cat: 'business', desc: 'Smart task management AI.', domain: 'todoist.com' },
-            { name: 'Fireflies', cat: 'business', desc: 'Record and search meetings.', domain: 'fireflies.ai' },
-            { name: 'Synthesia', cat: 'business', desc: 'AI video creation with avatars.', domain: 'synthesia.io' }
+        const toolsData = [
+            { id: 'chatgpt', name: 'ChatGPT', desc: 'Ultimate AI assistant for research.', domain: 'openai.com' },
+            { id: 'grammarly', name: 'Grammarly', desc: 'Best tool for checking grammar.', domain: 'grammarly.com' },
+            { id: 'rezi', name: 'Rezi.ai', desc: 'Build ATS-proof resumes fast.', domain: 'rezi.ai' },
+            { id: 'quillbot', name: 'Quillbot', desc: 'AI paraphrasing tool for essays.', domain: 'quillbot.com' },
+            { id: 'canva', name: 'Canva Magic', desc: 'Create AI designs and earn money.', domain: 'canva.com' }
         ];
 
-        const toolList = document.getElementById('toolList');
-
-        function displayTools(data) {
-            toolList.innerHTML = '';
-            data.forEach(tool => {
-                const card = document.createElement('div');
-                card.className = 'tool-card';
-                card.innerHTML = `
-                    <div class="logo-wrap">
-                        <img src="https://www.google.com/s2/favicons?domain=${tool.domain}&sz=128" alt="${tool.name}">
-                    </div>
-                    <div class="tool-content">
+        const grid = document.getElementById('toolsGrid');
+        
+        toolsData.forEach(tool => {
+            // কন্ট্রোল রুম থেকে লিঙ্ক নেওয়া, না থাকলে ডোমেইন লিঙ্ক ব্যবহার
+            const finalLink = affiliateConfig[tool.id] || "https://" + tool.domain;
+            
+            grid.innerHTML += `
+                <div class="tool-card">
+                    <img class="tool-logo" src="https://www.google.com/s2/favicons?domain=${tool.domain}&sz=128">
+                    <div class="tool-info">
                         <h3>${tool.name}</h3>
                         <p>${tool.desc}</p>
                     </div>
-                    <a href="https://${tool.domain}" target="_blank" class="visit-btn">Visit</a>
-                `;
-                toolList.appendChild(card);
-            });
-        }
-
-        displayTools(tools);
-
-        function search() {
-            let q = document.getElementById('searchInput').value.toLowerCase();
-            displayTools(tools.filter(t => t.name.toLowerCase().includes(q)));
-        }
-
-        function filter(cat, btn) {
-            document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            if(cat === 'all') displayTools(tools);
-            else displayTools(tools.filter(t => t.cat === cat));
-        }
+                    <a href="${finalLink}" target="_blank" class="btn-visit">Visit</a>
+                </div>
+            `;
+        });
     </script>
 </body>
 </html>
