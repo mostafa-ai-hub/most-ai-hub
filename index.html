@@ -1,160 +1,124 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Most AI Hub | 50+ Best Free AI Tools for Students</title>
+    <title>Most AI Hub | AI Success System Pro & Free AI Library</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        :root { --bg: #F8FAFC; --primary: #4169E1; --secondary: #7B2FF7; --dark: #0F172A; --white: #FFFFFF; --gold: #FBBF24; --green: #10B981; }
+        :root { --bg: #F8FAFC; --primary: #4169E1; --secondary: #7B2FF7; --dark: #0F172A; --gold: #FBBF24; --red: #EF4444; }
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
         body { background: var(--bg); color: #1E293B; line-height: 1.6; }
-        .header { background: linear-gradient(135deg, var(--primary), var(--secondary)); padding: 60px 20px 80px; text-align: center; color: white; border-bottom-left-radius: 50px; border-bottom-right-radius: 50px; }
-        .header h1 { font-size: 32px; font-weight: 800; margin-bottom: 10px; }
-        .pro-btn-top { background: var(--gold); color: #000; padding: 12px 30px; border-radius: 30px; text-decoration: none; font-weight: 800; display: inline-block; margin-top: 15px; font-size: 14px; box-shadow: 0 8px 20px rgba(251, 191, 36, 0.3); }
-        .container { padding: 0 20px; max-width: 800px; margin: 0 auto; }
-        .trust-bar { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: -30px 20px 30px; }
-        .trust-item { background: white; padding: 12px; border-radius: 15px; text-align: center; box-shadow: 0 10px 25px rgba(0,0,0,0.06); font-size: 10px; font-weight: 700; color: var(--primary); border: 1px solid #f1f5f9; }
-        .search-box { background: white; height: 60px; border-radius: 30px; display: flex; align-items: center; padding: 0 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); margin-bottom: 25px; border: 1px solid #e2e8f0; }
-        .search-box input { border: none; width: 100%; margin-left: 10px; font-size: 16px; outline: none; background: transparent; }
-        .categories { display: flex; overflow-x: auto; gap: 10px; margin-bottom: 25px; scrollbar-width: none; }
-        .cat-btn { white-space: nowrap; padding: 10px 24px; background: #E8EDF5; border-radius: 25px; font-size: 13px; font-weight: 600; color: #64748B; border: none; }
-        .cat-btn.active { background: var(--primary); color: white; }
-        .tool-card { background: white; border-radius: 25px; padding: 18px; display: flex; align-items: center; margin-bottom: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); border: 1px solid #f1f5f9; }
-        .logo-wrap { width: 50px; height: 50px; border-radius: 14px; margin-right: 15px; background: #f8faff; display: flex; align-items: center; justify-content: center; border: 1px solid #eee; overflow: hidden; }
-        .logo-wrap img { width: 34px; height: 34px; object-fit: contain; }
-        .tool-info { flex: 1; }
-        .tool-info h3 { font-size: 16px; font-weight: 700; display: flex; align-items: center; gap: 6px; }
-        .free-badge { color: #10B981; font-size: 10px; font-weight: 800; background: #ecfdf5; padding: 2px 8px; border-radius: 6px; }
-        .btn-visit { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; padding: 10px 20px; border-radius: 18px; text-decoration: none; font-size: 12px; font-weight: 700; }
-        
-        /* FOOTER BUTTONS */
-        footer { text-align: center; padding: 60px 20px; color: #94a3b8; font-size: 12px; border-top: 1px solid #eee; }
-        .footer-nav { margin-top: 15px; display: flex; justify-content: center; gap: 15px; }
-        .footer-nav a { color: #64748B; text-decoration: none; font-weight: 600; font-size: 14px; }
+
+        /* HERO SECTION */
+        .hero { background: linear-gradient(135deg, var(--primary), var(--secondary)); padding: 80px 20px 120px; text-align: center; color: white; border-bottom-left-radius: 60px; border-bottom-right-radius: 60px; }
+        .hero h1 { font-size: 36px; font-weight: 800; margin-bottom: 15px; letter-spacing: -1px; }
+        .hero p { font-size: 16px; opacity: 0.9; margin-bottom: 30px; max-width: 500px; margin-left: auto; margin-right: auto; }
+        .btn-free-pdf { background: var(--white); color: var(--primary); padding: 18px 35px; border-radius: 40px; text-decoration: none; font-weight: 800; font-size: 16px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); display: inline-block; }
+
+        .container { padding: 0 20px; max-width: 850px; margin: 0 auto; }
+
+        /* URGENCY BAR */
+        .urgency-bar { background: #fee2e2; color: var(--red); padding: 12px; text-align: center; font-weight: 700; font-size: 13px; border-radius: 15px; margin: -30px 20px 30px; border: 1px solid #fecaca; }
+
+        /* RECOMMENDED TOOLS (AFFILIATE) */
+        .section-title { margin: 40px 0 20px; font-size: 24px; font-weight: 800; text-align: center; }
+        .affiliate-grid { display: grid; grid-template-columns: 1fr; gap: 15px; margin-bottom: 50px; }
+        .aff-card { background: white; border-radius: 25px; padding: 20px; display: flex; align-items: center; border: 1px solid #e2e8f0; }
+        .aff-logo { width: 50px; height: 50px; border-radius: 12px; margin-right: 15px; }
+
+        /* PREMIUM SYSTEM PRO SECTION */
+        .premium-box { background: var(--dark); color: white; padding: 50px 25px; border-radius: 45px; text-align: center; margin: 40px 0; border: 4px solid var(--gold); position: relative; }
+        .launch-tag { position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--gold); color: black; padding: 5px 25px; border-radius: 20px; font-weight: 900; font-size: 12px; }
+        .price-row { margin: 20px 0; }
+        .old-price { text-decoration: line-through; opacity: 0.5; font-size: 20px; }
+        .new-price { font-size: 52px; font-weight: 900; color: var(--gold); }
+        .module-list { text-align: left; margin: 25px 0; background: rgba(255,255,255,0.05); padding: 20px; border-radius: 20px; font-size: 14px; }
+        .module-list li { list-style: none; margin-bottom: 10px; display: flex; gap: 10px; }
+        .btn-premium { background: var(--gold); color: black; width: 100%; padding: 20px; border-radius: 20px; border: none; font-weight: 900; font-size: 18px; text-decoration: none; display: block; }
+
+        /* TESTIMONIALS */
+        .testimonials { padding: 40px 0; }
+        .test-card { background: #fff; padding: 25px; border-radius: 25px; margin-bottom: 15px; border: 1px solid #eee; font-style: italic; font-size: 14px; }
+
+        /* FAQ */
+        .faq-section { padding: 40px 0; }
+        .faq-item { background: white; padding: 15px; border-radius: 15px; margin-bottom: 10px; font-size: 14px; }
+
+        footer { text-align: center; padding: 60px 20px; color: #94a3b8; font-size: 12px; }
+        .footer-nav { margin-top: 20px; display: flex; justify-content: center; gap: 15px; }
     </style>
 </head>
 <body>
 
-    <section class="header">
-        <h1>Most AI Hub</h1>
-        <p>Unlock 50+ Powerful AI Tools for FREE</p>
-        <a href="premium.html" class="pro-btn-top">👑 Join Pro VIP</a>
+    <section class="hero">
+        <h1>Unlock Your Career with <br><span style="color: var(--gold);">Most AI Hub</span></h1>
+        <p>Master AI tools for exams, resumes, and high-paying freelancing jobs in 2026.</p>
+        <a href="premium.html" class="btn-free-pdf">🎁 Download Free 50 AI Prompts PDF</a>
     </section>
 
+    <div class="urgency-bar">🔥 Launch Offer: Only 50 spots left at ₹399!</div>
+
     <div class="container">
-        <div class="trust-bar">
-            <div class="trust-item">⭐ 4.9/5 Student Rating</div>
-            <div class="trust-item">🔒 Verified Safe Tools</div>
+        
+        <h2 class="section-title">Recommended AI Tools</h2>
+        <div class="affiliate-grid">
+            <div class="aff-card">
+                <img class="aff-logo" src="https://icons.duckduckgo.com/ip3/openai.com.ico">
+                <div style="flex:1;"><h3>ChatGPT</h3><p style="font-size:11px;">The #1 AI for students.</p></div>
+                <a href="https://openai.com" target="_blank" style="color:var(--primary); font-weight:700; text-decoration:none;">Visit</a>
+            </div>
+            <div class="aff-card">
+                <img class="aff-logo" src="https://icons.duckduckgo.com/ip3/grammarly.com.ico">
+                <div style="flex:1;"><h3>Grammarly</h3><p style="font-size:11px;">Fix assignment mistakes.</p></div>
+                <a href="https://grammarly.com" target="_blank" style="color:var(--primary); font-weight:700; text-decoration:none;">Visit</a>
+            </div>
         </div>
 
-        <div class="search-box">
-            <span>🔍</span>
-            <input type="text" id="searchInput" placeholder="Search 50+ AI tools..." onkeyup="search()">
+        <!-- NEW PREMIUM SYSTEM PRO -->
+        <div class="premium-box" id="premium">
+            <div class="launch-tag">LIMITED TIME SUCCESS KIT</div>
+            <h2 style="font-size: 26px;">AI Success System Pro</h2>
+            <div class="price-row">
+                <span class="old-price">₹1999</span><br>
+                <span class="new-price">₹399</span>
+            </div>
+            <p style="color: #fbbf24; font-weight: 700; margin-bottom: 20px;">Complete Career & Income Roadmap</p>
+            
+            <ul class="module-list">
+                <li>✅ Module 1: Resume Master (3 Templates + AI Guide)</li>
+                <li>✅ Module 2: Freelancing Secret (Fiverr + Proposal)</li>
+                <li>✅ Module 3: Job & Internship Finder System</li>
+                <li>✅ Module 4: High-Performance Study System</li>
+                <li>✅ Bonus: Direct WhatsApp Support from Mostafa</li>
+            </ul>
+
+            <a href="https://api.whatsapp.com/send?phone=918370899203&text=I%20want%20the%20AI%20Success%20System%20Pro%20Offer." target="_blank" class="btn-premium">GET FULL ACCESS NOW</a>
+            <p style="font-size: 10px; margin-top: 15px; opacity: 0.6;">🔒 100% Secure | Money Back Guarantee</p>
         </div>
 
-        <div class="categories">
-            <button class="cat-btn active" onclick="filter('all', this)">All Tools</button>
-            <button class="cat-btn" onclick="filter('study', this)">Study Aid</button>
-            <button class="cat-btn" onclick="filter('writing', this)">AI Writing</button>
-            <button class="cat-btn" onclick="filter('career', this)">Job Help</button>
+        <h2 class="section-title">What Students Say</h2>
+        <div class="testimonials">
+            <div class="test-card">"₹399 is nothing for the value Mostafa is giving. The freelancing guide helped me get my first client!" - Amit, Student</div>
+            <div class="test-card">"The 50 prompts PDF is my daily study partner now. Best site for AI!" - Sneha, Job Seeker</div>
         </div>
 
-        <div id="toolsGrid"></div>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-section">
+            <div class="faq-item"><b>Is this useful for freshers?</b><br>Yes, it's specifically designed for freshers and students.</div>
+            <div class="faq-item"><b>How will I receive the files?</b><br>Instantly via email and WhatsApp after payment.</div>
+        </div>
+
     </div>
 
     <footer>
-        <p>© 2026 Most AI Hub | Developed by Mostafa</p>
-        <!-- বাটনগুলো এখানে সেট করে দিয়েছি -->
+        <p>© 2026 Most AI Hub | Built by Mostafa</p>
         <div class="footer-nav">
-            <a href="about.html">About Us</a>
-            <a href="privacy.html">Privacy Policy</a>
-            <a href="premium.html">Pricing</a>
+            <a href="about.html" style="color:#94a3b8; text-decoration:none;">About</a>
+            <a href="privacy.html" style="color:#94a3b8; text-decoration:none;">Privacy</a>
+            <a href="contact.html" style="color:#94a3b8; text-decoration:none;">Contact</a>
         </div>
     </footer>
 
-    <script>
-        const tools = [
-            { name: 'ChatGPT', cat: 'study', desc: 'Powerful homework helper.', domain: 'openai.com' },
-            { name: 'Grammarly', cat: 'writing', desc: 'Check your grammar.', domain: 'grammarly.com' },
-            { name: 'Gemini', cat: 'study', desc: 'Google expert study AI.', domain: 'gemini.google.com' },
-            { name: 'Rezi AI', cat: 'career', desc: 'Build professional resume.', domain: 'rezi.ai' },
-            { name: 'Quillbot', cat: 'writing', desc: 'AI Paraphrasing tool.', domain: 'quillbot.com' },
-            { name: 'Perplexity', cat: 'study', desc: 'AI real-time search.', domain: 'perplexity.ai' },
-            { name: 'Canva Magic', cat: 'design', desc: 'AI design tools.', domain: 'canva.com' },
-            { name: 'Socratic', cat: 'study', desc: 'Visual math helper.', domain: 'socratic.org' },
-            { name: 'WolframAlpha', cat: 'study', desc: 'Math & science solver.', domain: 'wolframalpha.com' },
-            { name: 'Claude AI', cat: 'writing', desc: 'Writing and coding.', domain: 'anthropic.com' },
-            { name: 'Kickresume', cat: 'career', desc: 'Modern resume maker.', domain: 'kickresume.com' },
-            { name: 'Leonardo AI', cat: 'design', desc: 'AI image generator.', domain: 'leonardo.ai' },
-            { name: 'Adobe Firefly', cat: 'design', desc: 'Creative generative AI.', domain: 'adobe.com' },
-            { name: 'Tome AI', cat: 'study', desc: 'Make AI presentations.', domain: 'tome.app' },
-            { name: 'Otter.ai', cat: 'study', desc: 'Audio to text notes.', domain: 'otter.ai' },
-            { name: 'Jasper AI', cat: 'writing', desc: 'Pro writing assistant.', domain: 'jasper.ai' },
-            { name: 'Copy.ai', cat: 'writing', desc: 'Marketing AI tool.', domain: 'copy.ai' },
-            { name: 'Zety', cat: 'career', desc: 'Fast resume builder.', domain: 'zety.com' },
-            { name: 'JobScan', cat: 'career', desc: 'Check resume score.', domain: 'jobscan.co' },
-            { name: 'Notion AI', cat: 'study', desc: 'Workspace for students.', domain: 'notion.so' },
-            { name: 'Writesonic', cat: 'writing', desc: 'SEO content builder.', domain: 'writesonic.com' },
-            { name: 'Rytr', cat: 'writing', desc: 'Simple free writing AI.', domain: 'rytr.me' },
-            { name: 'HuggingChat', cat: 'study', desc: 'Open source AI chat.', domain: 'huggingface.co' },
-            { name: 'Hemingway', cat: 'writing', desc: 'Clean writing tool.', domain: 'hemingwayapp.com' },
-            { name: 'Resume.io', cat: 'career', desc: 'Professional resumes.', domain: 'resume.io' },
-            { name: 'Elicit', cat: 'study', desc: 'Research assistant AI.', domain: 'elicit.org' },
-            { name: 'Mendeley', cat: 'study', desc: 'Study reference manager.', domain: 'mendeley.com' },
-            { name: 'Fiverr AI', cat: 'career', desc: 'Find AI freelance jobs.', domain: 'fiverr.com' },
-            { name: 'DALL-E', cat: 'design', desc: 'Image generator by OpenAI.', domain: 'openai.com' },
-            { name: 'Looka', cat: 'design', desc: 'AI logo design tool.', domain: 'looka.com' },
-            { name: 'Runway', cat: 'design', desc: 'Video generation AI.', domain: 'runwayml.com' },
-            { name: 'Pika Art', cat: 'design', desc: 'Text to video AI.', domain: 'pika.art' },
-            { name: 'ClipDrop', cat: 'design', desc: 'Clean up photos with AI.', domain: 'clipdrop.co' },
-            { name: 'Gamma AI', cat: 'study', desc: 'AI for slides.', domain: 'gamma.app' },
-            { name: 'Synthesia', cat: 'career', desc: 'AI video creator.', domain: 'synthesia.io' },
-            { name: '10Web', cat: 'career', desc: 'AI website maker.', domain: '10web.io' },
-            { name: 'Durable', cat: 'career', desc: '30s website builder.', domain: 'durable.co' },
-            { name: 'Todoist AI', cat: 'study', desc: 'Smart task manager.', domain: 'todoist.com' },
-            { name: 'Clockwise', cat: 'study', desc: 'AI schedule planner.', domain: 'getclockwise.com' },
-            { name: 'Fireflies', cat: 'study', desc: 'Record study meetings.', domain: 'fireflies.ai' },
-            { name: 'Lovo AI', cat: 'design', desc: 'AI voice generator.', domain: 'lovo.ai' },
-            { name: 'Brandmark', cat: 'design', desc: 'AI branding tool.', domain: 'brandmark.io' },
-            { name: 'Wordtune', cat: 'writing', desc: 'AI sentence rewriter.', domain: 'wordtune.com' },
-            { name: 'ProWritingAid', cat: 'writing', desc: 'Deep essay checker.', domain: 'prowritingaid.com' },
-            { name: 'Trello', cat: 'study', desc: 'Project manager AI.', domain: 'trello.com' },
-            { name: 'Midjourney', cat: 'design', desc: 'Top quality AI art.', domain: 'midjourney.com' },
-            { name: 'Enhancv', cat: 'career', desc: 'Visual resume builder.', domain: 'enhancv.com' },
-            { name: 'VisualCV', cat: 'career', desc: 'Design job resumes.', domain: 'visualcv.com' },
-            { name: 'HiredScore', cat: 'career', desc: 'Match jobs with AI.', domain: 'hiredscore.com' },
-            { name: 'Pixlr AI', cat: 'design', desc: 'Online photo editor.', domain: 'pixlr.com' }
-        ];
-        const grid = document.getElementById('toolsGrid');
-        function displayTools(filtered) {
-            grid.innerHTML = '';
-            filtered.forEach(tool => {
-                grid.innerHTML += `
-                    <div class="tool-card">
-                        <div class="logo-wrap">
-                            <img src="https://icons.duckduckgo.com/ip3/${tool.domain}.ico" alt="">
-                        </div>
-                        <div class="tool-info">
-                            <h3>${tool.name} <span class="free-badge">FREE</span></h3>
-                            <p>${tool.desc}</p>
-                        </div>
-                        <a href="https://${tool.domain}" target="_blank" class="btn-visit">Visit</a>
-                    </div>
-                `;
-            });
-        }
-        displayTools(tools);
-        function search() {
-            let q = document.getElementById('searchInput').value.toLowerCase();
-            displayTools(tools.filter(t => t.name.toLowerCase().includes(q)));
-        }
-        function filter(cat, btn) {
-            document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            if(cat === 'all') displayTools(tools);
-            else displayTools(tools.filter(t => t.cat === cat));
-        }
-    </script>
 </body>
 </html>
