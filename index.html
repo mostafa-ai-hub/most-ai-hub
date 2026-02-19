@@ -3,41 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Most AI Hub | 50+ Best AI Tools for Students</title>
+    <title>Most AI Hub | 50+ Best Free AI Tools for Students</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root { --bg: #F8FAFC; --primary: #4169E1; --secondary: #7B2FF7; --dark: #0F172A; --white: #FFFFFF; --gold: #FBBF24; --green: #10B981; }
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
-        body { background: var(--bg); color: #1E293B; line-height: 1.6; padding-bottom: 40px; }
-
-        .header { background: linear-gradient(135deg, var(--primary), var(--secondary)); padding: 80px 20px 100px; text-align: center; color: white; border-bottom-left-radius: 50px; border-bottom-right-radius: 50px; }
-        .header h1 { font-size: 34px; font-weight: 800; margin-bottom: 10px; }
-        
-        /* NEW JOIN PRO BUTTON */
+        body { background: var(--bg); color: #1E293B; line-height: 1.6; }
+        .header { background: linear-gradient(135deg, var(--primary), var(--secondary)); padding: 60px 20px 80px; text-align: center; color: white; border-bottom-left-radius: 50px; border-bottom-right-radius: 50px; }
+        .header h1 { font-size: 32px; font-weight: 800; margin-bottom: 10px; }
         .pro-btn-top { background: var(--gold); color: #000; padding: 12px 30px; border-radius: 30px; text-decoration: none; font-weight: 800; display: inline-block; margin-top: 15px; font-size: 14px; box-shadow: 0 8px 20px rgba(251, 191, 36, 0.3); }
-
         .container { padding: 0 20px; max-width: 800px; margin: 0 auto; }
         .trust-bar { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: -30px 20px 30px; }
-        .trust-item { background: white; padding: 12px; border-radius: 15px; text-align: center; box-shadow: 0 10px 25px rgba(0,0,0,0.06); font-size: 11px; font-weight: 700; color: var(--primary); border: 1px solid #f1f5f9; }
-
+        .trust-item { background: white; padding: 12px; border-radius: 15px; text-align: center; box-shadow: 0 10px 25px rgba(0,0,0,0.06); font-size: 10px; font-weight: 700; color: var(--primary); border: 1px solid #f1f5f9; }
         .search-box { background: white; height: 60px; border-radius: 30px; display: flex; align-items: center; padding: 0 20px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); margin-bottom: 25px; border: 1px solid #e2e8f0; }
         .search-box input { border: none; width: 100%; margin-left: 10px; font-size: 16px; outline: none; background: transparent; }
-
         .categories { display: flex; overflow-x: auto; gap: 10px; margin-bottom: 25px; scrollbar-width: none; }
-        .categories::-webkit-scrollbar { display: none; }
         .cat-btn { white-space: nowrap; padding: 10px 24px; background: #E8EDF5; border-radius: 25px; font-size: 13px; font-weight: 600; color: #64748B; border: none; }
         .cat-btn.active { background: var(--primary); color: white; }
-
         .tool-card { background: white; border-radius: 25px; padding: 18px; display: flex; align-items: center; margin-bottom: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); border: 1px solid #f1f5f9; }
         .logo-wrap { width: 50px; height: 50px; border-radius: 14px; margin-right: 15px; background: #f8faff; display: flex; align-items: center; justify-content: center; border: 1px solid #eee; overflow: hidden; }
         .logo-wrap img { width: 34px; height: 34px; object-fit: contain; }
-        
         .tool-info { flex: 1; }
         .tool-info h3 { font-size: 16px; font-weight: 700; display: flex; align-items: center; gap: 6px; }
         .free-badge { color: #10B981; font-size: 10px; font-weight: 800; background: #ecfdf5; padding: 2px 8px; border-radius: 6px; }
         .btn-visit { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; padding: 10px 20px; border-radius: 18px; text-decoration: none; font-size: 12px; font-weight: 700; }
-
-        footer { text-align: center; padding: 40px; color: #94a3b8; font-size: 12px; }
+        
+        /* FOOTER BUTTONS */
+        footer { text-align: center; padding: 60px 20px; color: #94a3b8; font-size: 12px; border-top: 1px solid #eee; }
+        .footer-nav { margin-top: 15px; display: flex; justify-content: center; gap: 15px; }
+        .footer-nav a { color: #64748B; text-decoration: none; font-weight: 600; font-size: 14px; }
     </style>
 </head>
 <body>
@@ -45,7 +39,6 @@
     <section class="header">
         <h1>Most AI Hub</h1>
         <p>Unlock 50+ Powerful AI Tools for FREE</p>
-        <!-- বাটনটি প্রিমিয়াম পেজের সাথে লিঙ্ক করা -->
         <a href="premium.html" class="pro-btn-top">👑 Join Pro VIP</a>
     </section>
 
@@ -72,8 +65,11 @@
 
     <footer>
         <p>© 2026 Most AI Hub | Developed by Mostafa</p>
-        <div style="margin-top:10px;">
-            <a href="premium.html" style="color:var(--primary); text-decoration:none; font-weight:700;">Pricing</a>
+        <!-- বাটনগুলো এখানে সেট করে দিয়েছি -->
+        <div class="footer-nav">
+            <a href="about.html">About Us</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="premium.html">Pricing</a>
         </div>
     </footer>
 
@@ -130,9 +126,7 @@
             { name: 'HiredScore', cat: 'career', desc: 'Match jobs with AI.', domain: 'hiredscore.com' },
             { name: 'Pixlr AI', cat: 'design', desc: 'Online photo editor.', domain: 'pixlr.com' }
         ];
-
         const grid = document.getElementById('toolsGrid');
-
         function displayTools(filtered) {
             grid.innerHTML = '';
             filtered.forEach(tool => {
@@ -150,14 +144,11 @@
                 `;
             });
         }
-
         displayTools(tools);
-
         function search() {
             let q = document.getElementById('searchInput').value.toLowerCase();
             displayTools(tools.filter(t => t.name.toLowerCase().includes(q)));
         }
-
         function filter(cat, btn) {
             document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
