@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Success Kit | Most AI Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root { --bg: #F8FAFC; --primary: #4169E1; --secondary: #7B2FF7; --dark: #0F172A; --gold: #FBBF24; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); padding: 40px 20px; text-align: center; }
+        
+        .premium-container { max-width: 600px; margin: 0 auto; }
+        .back-link { display: block; margin-bottom: 30px; color: var(--primary); text-decoration: none; font-weight: 700; }
+        
+        /* EMAIL BOX */
+        .box { background: white; padding: 30px; border-radius: 35px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); margin-bottom: 30px; border: 1px solid #f1f5f9; }
+        h2 { font-size: 24px; font-weight: 800; margin-bottom: 10px; color: var(--dark); }
+        p { font-size: 14px; color: #64748B; margin-bottom: 20px; }
+        
+        input { width: 100%; padding: 15px; border-radius: 15px; border: 1px solid #e2e8f0; margin-bottom: 15px; outline: none; font-size: 16px; }
+        .btn { width: 100%; padding: 16px; border-radius: 15px; border: none; font-weight: 800; cursor: pointer; font-size: 16px; transition: 0.3s; }
+        .btn-free { background: var(--dark); color: white; }
+        
+        /* PAID CARD */
+        .vip-card { background: white; border: 3px solid var(--gold); padding: 40px 30px; border-radius: 40px; position: relative; }
+        .vip-card h2 { color: #000; }
+        .price { font-size: 48px; font-weight: 900; color: var(--dark); margin: 15px 0; }
+        .btn-pay { background: var(--gold); color: #000; box-shadow: 0 10px 25px rgba(251, 191, 36, 0.4); }
+        
+        .features { text-align: left; margin: 25px 0; }
+        .features li { list-style: none; margin-bottom: 10px; font-size: 14px; font-weight: 600; color: #1e293b; }
+        .features li::before { content: "✅ "; }
+    </style>
+</head>
+<body>
+
+    <div class="premium-container">
+        <a href="index.html" class="back-link">← Back to AI Library</a>
+
+        <!-- FREE OFFER -->
+        <div class="box">
+            <h2>🎁 Free AI Starter Pack</h2>
+            <p>Get 40+ AI Prompts for study and job preparation instantly.</p>
+            <form action="https://formspree.io/f/mbdakarw" method="POST">
+                <input type="email" name="email" placeholder="Enter your best email..." required>
+                <!-- আপনার উপহারের ড্রাইভ লিঙ্কটি এখানে দিন -->
+                <input type="hidden" name="_next" value="https://docs.google.com/document/d/1Je8xCmPQZu_mtBB36CuW2d831pbndHZt4LafMzFzAFw/edit?usp=sharing">
+                <button type="submit" class="btn btn-free">Send Me the Free Pack</button>
+            </form>
+        </div>
+
+        <!-- PAID OFFER -->
+        <div class="vip-card">
+            <div style="background: #fee2e2; color: #dc2626; font-size: 10px; font-weight: 900; padding: 5px 15px; border-radius: 10px; display: inline-block; margin-bottom: 10px;">⚠️ LIMITED TIME OFFER</div>
+            <h2>👑 AI Success System Pro</h2>
+            <div class="price">₹999</div>
+            <p style="color: red; font-weight: 700;">Price increases in 24 hours!</p>
+            
+            <ul class="features">
+                <li>200+ Advanced Pro Prompts</li>
+                <li>Premium AI Resume Templates</li>
+                <li>Secret AI Earning Guide</li>
+                <li>WhatsApp Support from Mostafa</li>
+                <li>Ad-Free Lifetime Access</li>
+            </ul>
+
+            <a href="https://api.whatsapp.com/send?phone=918370899203&text=Hi%20Mostafa,%20I%20want%20to%20buy%20the%20VIP%20AI%20Success%20Kit." target="_blank" class="btn btn-pay" style="text-decoration: none; display: block;">Unlock VIP Access Now</a>
+            <p style="font-size: 10px; margin-top: 20px;">100% Money Back Guarantee if not satisfied.</p>
+        </div>
+    </div>
+
+</body>
+</html>
