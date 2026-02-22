@@ -1,122 +1,233 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Most AI Hub | AI Success System Pro & Free AI Library</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <title>Most AI Hub | Build High-Income AI Skills & Career Success</title>
+    <!-- Google Font: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
-        :root { --bg: #F8FAFC; --primary: #4169E1; --secondary: #7B2FF7; --dark: #0F172A; --gold: #FBBF24; --red: #EF4444; }
+        :root {
+            --bg: #020617; /* Deep Luxury Navy */
+            --primary-grad: linear-gradient(135deg, #4F46E5 0%, #7C3AED 50%, #C026D3 100%);
+            --glass: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --glow: rgba(124, 58, 237, 0.4);
+            --white: #FFFFFF;
+            --gold: #FBBF24;
+            --text-main: #F9FAFB;
+            --text-sub: #94A3B8;
+            --red: #EF4444;
+            --radius: 16px;
+        }
+
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
-        body { background: var(--bg); color: #1E293B; line-height: 1.6; }
+        body { background-color: var(--bg); color: var(--text-main); line-height: 1.6; overflow-x: hidden; }
 
-        /* HERO SECTION */
-        .hero { background: linear-gradient(135deg, var(--primary), var(--secondary)); padding: 80px 20px 120px; text-align: center; color: white; border-bottom-left-radius: 60px; border-bottom-right-radius: 60px; }
-        .hero h1 { font-size: 36px; font-weight: 800; margin-bottom: 15px; letter-spacing: -1px; }
-        .hero p { font-size: 16px; opacity: 0.9; margin-bottom: 30px; max-width: 500px; margin-left: auto; margin-right: auto; }
-        .btn-free-pdf { background: var(--white); color: var(--primary); padding: 18px 35px; border-radius: 40px; text-decoration: none; font-weight: 800; font-size: 16px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); display: inline-block; }
+        .container { padding: 0 5%; max-width: 1100px; margin: 0 auto; }
 
-        .container { padding: 0 20px; max-width: 850px; margin: 0 auto; }
+        /* 💎 NAVBAR */
+        .navbar { padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 2000; background: rgba(2, 6, 23, 0.9); backdrop-filter: blur(15px); border-bottom: 1px solid var(--glass-border); }
+        .logo { font-size: 22px; font-weight: 900; background: var(--primary-grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: -1px; }
+        .btn-nav { background: var(--primary-grad); color: white; padding: 10px 22px; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 13px; box-shadow: 0 4px 15px var(--glow); transition: 0.3s; }
 
-        /* URGENCY BAR */
-        .urgency-bar { background: #fee2e2; color: var(--red); padding: 12px; text-align: center; font-weight: 700; font-size: 13px; border-radius: 15px; margin: -30px 20px 30px; border: 1px solid #fecaca; }
+        /* 1️⃣ UPGRADED HERO SECTION */
+        .hero { padding: 120px 20px 150px; text-align: center; background: radial-gradient(circle at top, rgba(124, 58, 237, 0.15) 0%, transparent 70%); }
+        .trust-badge-top { background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border); padding: 8px 20px; border-radius: 30px; font-size: 11px; font-weight: 700; color: var(--gold); text-transform: uppercase; letter-spacing: 1px; display: inline-block; margin-bottom: 25px; }
+        .hero h1 { font-size: clamp(2.2rem, 5vw, 4.2rem); font-weight: 900; line-height: 1.1; margin-bottom: 20px; letter-spacing: -2.5px; }
+        .hero h1 span { background: var(--primary-grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero p { font-size: 19px; color: var(--text-sub); max-width: 750px; margin: 0 auto 35px; }
+        .rating-box { margin-bottom: 40px; display: block; }
+        .rating-box span { color: var(--gold); font-size: 16px; }
+        .rating-box p { font-size: 13px; color: var(--text-sub); margin-top: 5px; font-weight: 600; }
+        .hero-btns { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
+        .btn-main { background: var(--primary-grad); color: white; padding: 20px 45px; border-radius: 50px; text-decoration: none; font-weight: 800; font-size: 17px; box-shadow: 0 10px 40px var(--glow); transition: 0.4s; display: inline-block; }
+        .btn-outline { border: 1px solid #374151; color: white; padding: 18px 40px; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 16px; transition: 0.3s; }
+        .btn-main:hover { transform: translateY(-5px); }
 
-        /* RECOMMENDED TOOLS (AFFILIATE) */
-        .section-title { margin: 40px 0 20px; font-size: 24px; font-weight: 800; text-align: center; }
-        .affiliate-grid { display: grid; grid-template-columns: 1fr; gap: 15px; margin-bottom: 50px; }
-        .aff-card { background: white; border-radius: 25px; padding: 20px; display: flex; align-items: center; border: 1px solid #e2e8f0; }
-        .aff-logo { width: 50px; height: 50px; border-radius: 12px; margin-right: 15px; }
+        /* 3️⃣ CREDIBLE FOUNDER SECTION */
+        .founder-section { padding: 100px 0; }
+        .founder-card { background: var(--glass); border: 1px solid var(--glass-border); border-radius: 40px; padding: 60px 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); align-items: center; gap: 40px; }
+        .founder-img { width: 180px; height: 180px; border-radius: 50%; border: 4px solid var(--glass-border); box-shadow: 0 10px 30px rgba(0,0,0,0.3); overflow: hidden; margin: 0 auto; }
+        .founder-img img { width: 100%; height: 100%; object-fit: cover; }
+        .cred-bullets { list-style: none; margin-top: 20px; }
+        .cred-bullets li { font-size: 15px; font-weight: 600; margin-bottom: 12px; display: flex; align-items: center; gap: 10px; color: var(--text-sub); }
+        .cred-bullets li::before { content: '•'; color: var(--gold); font-size: 24px; }
 
-        /* PREMIUM SYSTEM PRO SECTION */
-        .premium-box { background: var(--dark); color: white; padding: 50px 25px; border-radius: 45px; text-align: center; margin: 40px 0; border: 4px solid var(--gold); position: relative; }
-        .launch-tag { position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--gold); color: black; padding: 5px 25px; border-radius: 20px; font-weight: 900; font-size: 12px; }
-        .price-row { margin: 20px 0; }
-        .old-price { text-decoration: line-through; opacity: 0.5; font-size: 20px; }
-        .new-price { font-size: 52px; font-weight: 900; color: var(--gold); }
-        .module-list { text-align: left; margin: 25px 0; background: rgba(255,255,255,0.05); padding: 20px; border-radius: 20px; font-size: 14px; }
-        .module-list li { list-style: none; margin-bottom: 10px; display: flex; gap: 10px; }
-        .btn-premium { background: var(--gold); color: black; width: 100%; padding: 20px; border-radius: 20px; border: none; font-weight: 900; font-size: 18px; text-decoration: none; display: block; }
+        /* 4️⃣ VALUE STACK SECTION */
+        .value-stack { background: rgba(99, 102, 241, 0.03); border: 1px solid var(--glass-border); padding: 60px 30px; border-radius: 40px; margin: 80px 0; }
+        .stack-item { display: flex; justify-content: space-between; padding: 18px 0; border-bottom: 1px solid rgba(255,255,255,0.05); font-weight: 600; font-size: 16px; }
+        .stack-item span:last-child { text-decoration: line-through; color: var(--red); opacity: 0.6; }
+        .stack-total { display: flex; justify-content: space-between; padding-top: 30px; font-size: 24px; font-weight: 900; }
 
-        /* TESTIMONIALS */
-        .testimonials { padding: 40px 0; }
-        .test-card { background: #fff; padding: 25px; border-radius: 25px; margin-bottom: 15px; border: 1px solid #eee; font-style: italic; font-size: 14px; }
+        /* 5️⃣ OPTIMIZED PRICING SECTION */
+        .pricing-wrap { padding: 100px 20px; display: flex; justify-content: center; }
+        .pricing-card { background: var(--white); color: #020617; padding: 80px 40px; border-radius: 40px; width: 100%; max-width: 600px; text-align: center; position: relative; border: 4px solid var(--gold); box-shadow: 0 30px 100px var(--glow); transform: scale(1.05); }
+        .limit-badge { position: absolute; top: 30px; right: -20px; background: #000; color: var(--gold); padding: 10px 35px; font-size: 11px; font-weight: 900; transform: rotate(15deg); box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
+        .pricing-card .old-strike { text-decoration: line-through; opacity: 0.3; font-size: 26px; font-weight: 700; display: block; }
+        .pricing-card h2 { font-size: 92px; font-weight: 900; letter-spacing: -6px; margin: 10px 0; color: #000; }
+        .btn-huge { background: var(--primary-grad); color: white; padding: 25px; border-radius: 40px; font-weight: 900; font-size: 22px; text-decoration: none; display: block; margin: 30px 0; box-shadow: 0 15px 40px rgba(124, 58, 237, 0.4); transition: 0.3s; }
+        .trust-badges { display: flex; justify-content: center; gap: 15px; margin-top: 30px; opacity: 0.7; font-size: 11px; font-weight: 800; }
 
-        /* FAQ */
-        .faq-section { padding: 40px 0; }
-        .faq-item { background: white; padding: 15px; border-radius: 15px; margin-bottom: 10px; font-size: 14px; }
+        /* 6️⃣ GUARANTEE SECTION */
+        .guarantee-section { padding: 80px 40px; text-align: center; background: rgba(16, 185, 129, 0.05); border: 1px solid rgba(16, 185, 129, 0.1); border-radius: 40px; margin: 80px 0; }
+        .guarantee-section h3 { font-size: 24px; font-weight: 900; color: var(--green); margin-bottom: 10px; }
 
-        footer { text-align: center; padding: 60px 20px; color: #94a3b8; font-size: 12px; }
-        .footer-nav { margin-top: 20px; display: flex; justify-content: center; gap: 15px; }
+        /* 7️⃣ TESTIMONIALS UPGRADE */
+        .test-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; }
+        .test-card { background: var(--white); color: #020617; padding: 40px; border-radius: 30px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        .test-stars { color: var(--gold); font-size: 14px; margin-bottom: 15px; display: block; }
+        .test-header { display: flex; align-items: center; gap: 15px; margin-top: 25px; }
+        .test-avatar { width: 60px; height: 60px; border-radius: 50%; object-fit: cover; border: 2px solid #E2E8F0; background: #eee; }
+        .test-name { font-weight: 800; font-size: 16px; }
+
+        /* 8️⃣ PROFESSIONAL FOOTER */
+        footer { padding: 100px 5% 40px; background: #01040f; border-top: 1px solid var(--glass-border); text-align: center; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; text-align: left; margin-bottom: 60px; }
+        .footer-col h4 { margin-bottom: 25px; font-weight: 800; color: white; }
+        .footer-col a { color: var(--text-sub); text-decoration: none; display: block; margin-bottom: 12px; font-size: 14px; transition: 0.3s; }
+        .footer-col a:hover { color: white; }
+        .copyright-bar { border-top: 1px solid rgba(255,255,255,0.05); padding-top: 40px; font-size: 12px; color: var(--text-sub); }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 38px; }
+            .pricing-card { transform: scale(1); padding: 50px 25px; }
+            .pricing-card h2 { font-size: 70px; }
+        }
     </style>
 </head>
 <body>
 
-    <section class="hero">
-        <h1>Unlock Your Career with <br><span style="color: var(--gold);">Most AI Hub</span></h1>
-        <p>Master AI tools for exams, resumes, and high-paying freelancing jobs in 2026.</p>
-        <a href="premium.html" class="btn-free-pdf">🎁 Download Free 50 AI Prompts PDF</a>
-    </section>
+    <nav class="navbar">
+        <a href="#" class="logo">MOST AI HUB</a>
+        <a href="#pricing" class="btn-nav">Secure Access</a>
+    </nav>
 
-    <div class="urgency-bar">🔥 Launch Offer: Only 50 spots left at ₹399!</div>
+    <!-- 1️⃣ HERO SECTION -->
+    <section class="hero">
+        <div class="container">
+            <div class="trust-badge-top">Trusted by 1000+ Students</div>
+            <h1>Build High-Income <span>AI Skills</span> & Secure Your Digital Future</h1>
+            <p>Master the AI systems that double your productivity and land high-paying global clients. No fluff, just practical results.</p>
+            <div class="rating-box">
+                <span>★★★★★</span>
+                <p>Rated 4.9/5 by Learners</p>
+            </div>
+            <div class="hero-btns">
+                <a href="#pricing" class="btn-main">Unlock Lifetime Access Now</a>
+                <a href="#curriculum" class="btn-outline">View Full Curriculum</a>
+            </div>
+        </div>
+    </section>
 
     <div class="container">
         
-        <h2 class="section-title">Recommended AI Tools</h2>
-        <div class="affiliate-grid">
-            <div class="aff-card">
-                <img class="aff-logo" src="https://icons.duckduckgo.com/ip3/openai.com.ico">
-                <div style="flex:1;"><h3>ChatGPT</h3><p style="font-size:11px;">The #1 AI for students.</p></div>
-                <a href="https://openai.com" target="_blank" style="color:var(--primary); font-weight:700; text-decoration:none;">Visit</a>
+        <!-- 3️⃣ MEET YOUR MENTOR -->
+        <h2 class="section-title">Meet Your Mentor</h2>
+        <div class="founder-card">
+            <div class="founder-img">
+                <!-- মোস্তফা ভাই, আপনার প্রফেশনাল ফটো এখানে থাকবে -->
+                <img src="https://i.ibb.co/G4r649vG/f-VCHdQ6-T.jpg" alt="Founder">
             </div>
-            <div class="aff-card">
-                <img class="aff-logo" src="https://icons.duckduckgo.com/ip3/grammarly.com.ico">
-                <div style="flex:1;"><h3>Grammarly</h3><p style="font-size:11px;">Fix assignment mistakes.</p></div>
-                <a href="https://grammarly.com" target="_blank" style="color:var(--primary); font-weight:700; text-decoration:none;">Visit</a>
+            <div class="founder-info" style="text-align: left;">
+                <h3 style="color:white; font-size: 28px;">Hi, I'm Mostafa.</h3>
+                <p style="color: var(--text-sub); margin-bottom: 20px;">I created Most AI Hub to make world-class AI education affordable and actionable. I've spent thousands of hours mastering these tools so you don't have to.</p>
+                <ul class="cred-bullets">
+                    <li>3+ Years Experience in AI & Digital Skills</li>
+                    <li>Helped 1000+ Students Learn AI Tools</li>
+                    <li>Focused on Practical Income Skills</li>
+                </ul>
+                <a href="https://wa.me/918370899203" class="btn-nav" style="display: inline-block; margin-top: 20px;">Connect on WhatsApp</a>
             </div>
         </div>
 
-        <!-- NEW PREMIUM SYSTEM PRO -->
-        <div class="premium-box" id="premium">
-            <div class="launch-tag">LIMITED TIME SUCCESS KIT</div>
-            <h2 style="font-size: 26px;">AI Success System Pro</h2>
-            <div class="price-row">
-                <span class="old-price">₹1999</span><br>
-                <span class="new-price">₹399</span>
+        <!-- 7️⃣ TESTIMONIALS UPGRADE -->
+        <h2 class="section-title">Success Stories</h2>
+        <div class="test-grid">
+            <div class="test-card">
+                <span class="test-stars">★★★★★</span>
+                <p>"I started freelancing using the AI tools recommended here and earned my first ₹15,000 within a month. Truly life-changing!"</p>
+                <div class="test-header">
+                    <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&q=80&w=100&h=100" class="test-avatar">
+                    <div class="test-info"><b>Rahul S.</b><span>Freelancer</span></div>
+                </div>
             </div>
-            <p style="color: #fbbf24; font-weight: 700; margin-bottom: 20px;">Complete Career & Income Roadmap</p>
-            
-            <ul class="module-list">
-                <li>✅ Module 1: Resume Master (3 Templates + AI Guide)</li>
-                <li>✅ Module 2: Freelancing Secret (Fiverr + Proposal)</li>
-                <li>✅ Module 3: Job & Internship Finder System</li>
-                <li>✅ Module 4: High-Performance Study System</li>
-                <li>✅ Bonus: Direct WhatsApp Support from Mostafa</li>
-            </ul>
-
-            <a href="https://api.whatsapp.com/send?phone=918370899203&text=I%20want%20the%20AI%20Success%20System%20Pro%20Offer." target="_blank" class="btn-premium">GET FULL ACCESS NOW</a>
-            <p style="font-size: 10px; margin-top: 15px; opacity: 0.6;">🔒 100% Secure | Money Back Guarantee</p>
+            <div class="test-card">
+                <span class="test-stars">★★★★★</span>
+                <p>"The resume kit is a masterpiece. I got shortlisted by 3 top firms in the same week I applied using the templates."</p>
+                <div class="test-header">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=100&h=100" class="test-avatar">
+                    <div class="test-info"><b>Sneha K.</b><span>Career Builder</span></div>
+                </div>
+            </div>
         </div>
 
-        <h2 class="section-title">What Students Say</h2>
-        <div class="testimonials">
-            <div class="test-card">"₹399 is nothing for the value Mostafa is giving. The freelancing guide helped me get my first client!" - Amit, Student</div>
-            <div class="test-card">"The 50 prompts PDF is my daily study partner now. Best site for AI!" - Sneha, Job Seeker</div>
+        <!-- 4️⃣ VALUE STACK SECTION -->
+        <h2 class="section-title">Total Program Value</h2>
+        <div class="value-stack">
+            <div class="stack-item"><span>AI Tools Library Access</span><span>₹4,999</span></div>
+            <div class="stack-item"><span>Premium Resume Mastery Kit</span><span>₹2,999</span></div>
+            <div class="stack-item"><span>Freelance Proposal Scripts</span><span>₹1,999</span></div>
+            <div class="stack-item"><span>Career Blueprint 2026</span><span>₹1,500</span></div>
+            <div class="stack-total">
+                <span style="color:var(--text-sub); font-size: 18px;">Total Real World Value:</span>
+                <span style="color:var(--red); text-decoration: line-through;">₹11,497</span>
+            </div>
+            <p style="text-align: center; color: var(--gold); font-weight: 800; margin-top: 30px; font-size: 24px;">Today Only: ₹399</p>
         </div>
 
-        <h2 class="section-title">Frequently Asked Questions</h2>
-        <div class="faq-section">
-            <div class="faq-item"><b>Is this useful for freshers?</b><br>Yes, it's specifically designed for freshers and students.</div>
-            <div class="faq-item"><b>How will I receive the files?</b><br>Instantly via email and WhatsApp after payment.</div>
+        <!-- 5️⃣ OPTIMIZED PRICING -->
+        <section class="pricing-wrap" id="pricing">
+            <div class="pricing-card">
+                <div class="limit-badge">LIMITED TIME OFFER</div>
+                <p style="font-weight:900; opacity:0.6; letter-spacing:2px; font-size:14px; color:#000;">GET LIFETIME ACCESS</p>
+                <span class="old-strike">₹4,999</span>
+                <h2>₹399</h2>
+                <p style="font-weight:800; color:#4B5563;">One-Time Payment. All Updates Included.</p>
+                
+                <a href="https://api.whatsapp.com/send?phone=918370899203&text=I%20want%20to%20buy%20the%20VIP%20AI%20Success%20Kit." target="_blank" class="btn-huge">GET FULL ACCESS NOW</a>
+                
+                <p style="font-size: 14px; font-weight: 800; color: var(--red); margin-bottom: 20px;">Instant Access After Payment</p>
+                
+                <div class="trust-badges">
+                    <span>🔒 SECURE PAYMENT</span> | <span>✅ 7-DAY GUARANTEE</span> | <span>♾️ LIFETIME</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6️⃣ GUARANTEE SECTION -->
+        <div class="guarantee-section">
+            <span style="font-size: 50px; display: block; margin-bottom: 20px;">🛡️</span>
+            <h3>7-Day No Questions Asked Refund Guarantee</h3>
+            <p style="color: var(--text-sub); max-width: 600px; margin: 0 auto;">We are so confident in our system that we offer a full refund if you're not satisfied within 7 days. Your success is our only priority.</p>
         </div>
 
     </div>
 
+    <!-- 8️⃣ FOOTER -->
     <footer>
-        <p>© 2026 Most AI Hub | Built by Mostafa</p>
-        <div class="footer-nav">
-            <a href="about.html" style="color:#94a3b8; text-decoration:none;">About</a>
-            <a href="privacy.html" style="color:#94a3b8; text-decoration:none;">Privacy</a>
-            <a href="contact.html" style="color:#94a3b8; text-decoration:none;">Contact</a>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h2 style="color:white; margin-bottom:15px; font-weight:900;">MOST AI HUB</h2>
+                    <p style="color:var(--text-sub); font-size:13px; max-width:250px;">Empowering the next generation with high-value AI skills and career roadmaps.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="about.html">About Us</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">Refund Policy</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <a href="mailto:khanmostafa50904@gmail.com">khanmostafa50904@gmail.com</a>
+                    <a href="https://wa.me/918370899203">WhatsApp Support</a>
+                </div>
+            </div>
+            <div class="copyright-bar">
+                © 2026 Most AI Hub. All rights reserved. | Built by Mostafa | Secure Payment via Razorpay
+            </div>
         </div>
     </footer>
 
